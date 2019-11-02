@@ -6,9 +6,7 @@ target 'Roomies' do
   use_frameworks!
 
   # Pods for Roomies
-  pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5'
-  pod 'ObjectMapper'
+  pod 'Ballcap'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
 

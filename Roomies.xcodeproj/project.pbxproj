@@ -14,9 +14,19 @@
 		8A1A86FB236D3C2C009D1D02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86F9236D3C2C009D1D02 /* Main.storyboard */; };
 		8A1A86FD236D3C2F009D1D02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86FC236D3C2F009D1D02 /* Assets.xcassets */; };
 		8A1A8700236D3C2F009D1D02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86FE236D3C2F009D1D02 /* LaunchScreen.storyboard */; };
-		8A1A8709236D42E4009D1D02 /* LivingSpaceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8708236D42E4009D1D02 /* LivingSpaceItem.swift */; };
-		8A1A870E236D44CE009D1D02 /* ObjectMapper+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A870D236D44CE009D1D02 /* ObjectMapper+Firebase.swift */; };
+		8A1A8709236D42E4009D1D02 /* BaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8708236D42E4009D1D02 /* BaseItem.swift */; };
 		8A1A8711236D4583009D1D02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A8710236D4583009D1D02 /* GoogleService-Info.plist */; };
+		8A1A8713236D4B48009D1D02 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8712236D4B48009D1D02 /* AppUser.swift */; };
+		8A1A8716236D4F79009D1D02 /* AppUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8715236D4F79009D1D02 /* AppUserProtocol.swift */; };
+		8A1A8718236D4FB8009D1D02 /* BaseItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8717236D4FB8009D1D02 /* BaseItemProtocol.swift */; };
+		8A1A871A236D5091009D1D02 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8719236D5091009D1D02 /* Bill.swift */; };
+		8A1A871C236D50EA009D1D02 /* BillProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A871B236D50EA009D1D02 /* BillProtocol.swift */; };
+		8A1A871E236D5252009D1D02 /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A871D236D5252009D1D02 /* Chore.swift */; };
+		8A1A8720236D531E009D1D02 /* ChoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A871F236D531E009D1D02 /* ChoreProtocol.swift */; };
+		8A1A8722236D537D009D1D02 /* Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8721236D537D009D1D02 /* Grocery.swift */; };
+		8A1A8724236D53BC009D1D02 /* CommentedItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8723236D53BC009D1D02 /* CommentedItemProtocol.swift */; };
+		8A1A8726236D53F6009D1D02 /* MiscellaneousItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8725236D53F6009D1D02 /* MiscellaneousItem.swift */; };
+		8A1A872A236D57B3009D1D02 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8729236D57B3009D1D02 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +41,19 @@
 		8A1A86FC236D3C2F009D1D02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A1A86FF236D3C2F009D1D02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A1A8701236D3C2F009D1D02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A1A8708236D42E4009D1D02 /* LivingSpaceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingSpaceItem.swift; sourceTree = "<group>"; };
-		8A1A870D236D44CE009D1D02 /* ObjectMapper+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectMapper+Firebase.swift"; sourceTree = "<group>"; };
+		8A1A8708236D42E4009D1D02 /* BaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseItem.swift; sourceTree = "<group>"; };
 		8A1A8710236D4583009D1D02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8A1A8712236D4B48009D1D02 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		8A1A8715236D4F79009D1D02 /* AppUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserProtocol.swift; sourceTree = "<group>"; };
+		8A1A8717236D4FB8009D1D02 /* BaseItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseItemProtocol.swift; sourceTree = "<group>"; };
+		8A1A8719236D5091009D1D02 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		8A1A871B236D50EA009D1D02 /* BillProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillProtocol.swift; sourceTree = "<group>"; };
+		8A1A871D236D5252009D1D02 /* Chore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
+		8A1A871F236D531E009D1D02 /* ChoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreProtocol.swift; sourceTree = "<group>"; };
+		8A1A8721236D537D009D1D02 /* Grocery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocery.swift; sourceTree = "<group>"; };
+		8A1A8723236D53BC009D1D02 /* CommentedItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentedItemProtocol.swift; sourceTree = "<group>"; };
+		8A1A8725236D53F6009D1D02 /* MiscellaneousItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscellaneousItem.swift; sourceTree = "<group>"; };
+		8A1A8729236D57B3009D1D02 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +106,7 @@
 		8A1A86F2236D3C2C009D1D02 /* Roomies */ = {
 			isa = PBXGroup;
 			children = (
-				8A1A870F236D4578009D1D02 /* Configuration */,
-				8A1A870C236D44B3009D1D02 /* Extensions */,
-				8A1A8707236D4291009D1D02 /* Models */,
+				8A1A8727236D552C009D1D02 /* Firebase */,
 				8A1A86F3236D3C2C009D1D02 /* AppDelegate.swift */,
 				8A1A86F5236D3C2C009D1D02 /* SceneDelegate.swift */,
 				8A1A86F7236D3C2C009D1D02 /* ViewController.swift */,
@@ -103,17 +121,14 @@
 		8A1A8707236D4291009D1D02 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8A1A8708236D42E4009D1D02 /* LivingSpaceItem.swift */,
+				8A1A8708236D42E4009D1D02 /* BaseItem.swift */,
+				8A1A8712236D4B48009D1D02 /* AppUser.swift */,
+				8A1A8719236D5091009D1D02 /* Bill.swift */,
+				8A1A871D236D5252009D1D02 /* Chore.swift */,
+				8A1A8721236D537D009D1D02 /* Grocery.swift */,
+				8A1A8725236D53F6009D1D02 /* MiscellaneousItem.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		8A1A870C236D44B3009D1D02 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				8A1A870D236D44CE009D1D02 /* ObjectMapper+Firebase.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8A1A870F236D4578009D1D02 /* Configuration */ = {
@@ -122,6 +137,37 @@
 				8A1A8710236D4583009D1D02 /* GoogleService-Info.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		8A1A8714236D4F6F009D1D02 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A8715236D4F79009D1D02 /* AppUserProtocol.swift */,
+				8A1A8717236D4FB8009D1D02 /* BaseItemProtocol.swift */,
+				8A1A871B236D50EA009D1D02 /* BillProtocol.swift */,
+				8A1A871F236D531E009D1D02 /* ChoreProtocol.swift */,
+				8A1A8723236D53BC009D1D02 /* CommentedItemProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8A1A8727236D552C009D1D02 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A8728236D574E009D1D02 /* Services */,
+				8A1A8707236D4291009D1D02 /* Models */,
+				8A1A8714236D4F6F009D1D02 /* Protocols */,
+				8A1A870F236D4578009D1D02 /* Configuration */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		8A1A8728236D574E009D1D02 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A8729236D57B3009D1D02 /* UserService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,11 +286,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A1A8709236D42E4009D1D02 /* LivingSpaceItem.swift in Sources */,
+				8A1A871A236D5091009D1D02 /* Bill.swift in Sources */,
+				8A1A8709236D42E4009D1D02 /* BaseItem.swift in Sources */,
+				8A1A8713236D4B48009D1D02 /* AppUser.swift in Sources */,
+				8A1A8718236D4FB8009D1D02 /* BaseItemProtocol.swift in Sources */,
+				8A1A8716236D4F79009D1D02 /* AppUserProtocol.swift in Sources */,
+				8A1A8720236D531E009D1D02 /* ChoreProtocol.swift in Sources */,
 				8A1A86F8236D3C2C009D1D02 /* ViewController.swift in Sources */,
+				8A1A8726236D53F6009D1D02 /* MiscellaneousItem.swift in Sources */,
+				8A1A8724236D53BC009D1D02 /* CommentedItemProtocol.swift in Sources */,
 				8A1A86F4236D3C2C009D1D02 /* AppDelegate.swift in Sources */,
-				8A1A870E236D44CE009D1D02 /* ObjectMapper+Firebase.swift in Sources */,
+				8A1A871E236D5252009D1D02 /* Chore.swift in Sources */,
+				8A1A872A236D57B3009D1D02 /* UserService.swift in Sources */,
 				8A1A86F6236D3C2C009D1D02 /* SceneDelegate.swift in Sources */,
+				8A1A871C236D50EA009D1D02 /* BillProtocol.swift in Sources */,
+				8A1A8722236D537D009D1D02 /* Grocery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
