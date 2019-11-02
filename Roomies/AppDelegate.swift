@@ -10,18 +10,28 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 import Ballcap
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    private var appUserSubscription: Disposable?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         BallcapApp.configure(Firestore.firestore().document("version/1"))
         
-        UserService.sharedInstance.signIn { (result) in
-            print(result.appUserDocument?.data)
+        self.appUserSubscription = UserService.sharedInstance.appUser.subscribe { (event: Event) in
+            if let appUser = event.element {
+                print("AppUser \(appUser)")
+            } else if let error = event.error {
+                print("Error \(error)")
+            }
+            
+            self.appUserSubscription!.dispose()
         }
+        
+        UserService.sharedInstance.signIn(email: "test@test.com", password: "test123")
         
         return true
     }

@@ -128,11 +128,19 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - Protobuf (3.10.0)
+  - RxCocoa (5.0.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.1)
 
 DEPENDENCIES:
   - Ballcap
   - Firebase/Auth
   - Firebase/Firestore
+  - RxCocoa
+  - RxSwift
 
 SPEC REPOS:
   trunk:
@@ -158,6 +166,9 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - RxCocoa
+    - RxRelay
+    - RxSwift
 
 SPEC CHECKSUMS:
   Ballcap: 72088fbc45de9af82b0541cc74e0ecc3ff5a7c05
@@ -182,7 +193,10 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
 
-PODFILE CHECKSUM: 2c495ac69386cf7e0e48af3a3df8570caa644d94
+PODFILE CHECKSUM: 52405319ba722d23a8c52e2ce78541ff6be5cb34
 
 COCOAPODS: 1.8.4

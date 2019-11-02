@@ -27,6 +27,8 @@
 		8A1A8724236D53BC009D1D02 /* CommentedItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8723236D53BC009D1D02 /* CommentedItemProtocol.swift */; };
 		8A1A8726236D53F6009D1D02 /* MiscellaneousItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8725236D53F6009D1D02 /* MiscellaneousItem.swift */; };
 		8A1A872A236D57B3009D1D02 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8729236D57B3009D1D02 /* UserService.swift */; };
+		8A1A872F236D6B16009D1D02 /* AuthorizationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A872E236D6B16009D1D02 /* AuthorizationResult.swift */; };
+		8A1A8731236D6BDC009D1D02 /* BaseUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8730236D6BDC009D1D02 /* BaseUserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		8A1A8723236D53BC009D1D02 /* CommentedItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentedItemProtocol.swift; sourceTree = "<group>"; };
 		8A1A8725236D53F6009D1D02 /* MiscellaneousItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscellaneousItem.swift; sourceTree = "<group>"; };
 		8A1A8729236D57B3009D1D02 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		8A1A872E236D6B16009D1D02 /* AuthorizationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResult.swift; sourceTree = "<group>"; };
+		8A1A8730236D6BDC009D1D02 /* BaseUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 		8A1A8727236D552C009D1D02 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				8A1A872D236D6AFE009D1D02 /* Miscellaneous */,
 				8A1A8728236D574E009D1D02 /* Services */,
 				8A1A8707236D4291009D1D02 /* Models */,
 				8A1A8714236D4F6F009D1D02 /* Protocols */,
@@ -168,6 +173,15 @@
 				8A1A8729236D57B3009D1D02 /* UserService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8A1A872D236D6AFE009D1D02 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A872E236D6B16009D1D02 /* AuthorizationResult.swift */,
+				8A1A8730236D6BDC009D1D02 /* BaseUserData.swift */,
+			);
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +304,7 @@
 				8A1A8709236D42E4009D1D02 /* BaseItem.swift in Sources */,
 				8A1A8713236D4B48009D1D02 /* AppUser.swift in Sources */,
 				8A1A8718236D4FB8009D1D02 /* BaseItemProtocol.swift in Sources */,
+				8A1A872F236D6B16009D1D02 /* AuthorizationResult.swift in Sources */,
 				8A1A8716236D4F79009D1D02 /* AppUserProtocol.swift in Sources */,
 				8A1A8720236D531E009D1D02 /* ChoreProtocol.swift in Sources */,
 				8A1A86F8236D3C2C009D1D02 /* ViewController.swift in Sources */,
@@ -301,6 +316,7 @@
 				8A1A86F6236D3C2C009D1D02 /* SceneDelegate.swift in Sources */,
 				8A1A871C236D50EA009D1D02 /* BillProtocol.swift in Sources */,
 				8A1A8722236D537D009D1D02 /* Grocery.swift in Sources */,
+				8A1A8731236D6BDC009D1D02 /* BaseUserData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

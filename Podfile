@@ -1,13 +1,11 @@
-# Uncomment the next line to define a global platform for your project
+inhibit_all_warnings!
 platform :ios, '12.0'
 
 target 'Roomies' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  # Pods for Roomies
+  pod 'RxSwift'
+  pod 'RxCocoa'
   pod 'Ballcap'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-
 end
