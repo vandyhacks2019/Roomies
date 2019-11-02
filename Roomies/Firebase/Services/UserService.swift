@@ -19,7 +19,7 @@ class UserService {
     static let sharedInstance = UserService()
 
     private var authInstance: Auth
-    private var appUsersCollection: CollectionReference
+    private var appUsersRef: CollectionReference
 
     /// Current AppUser
     private (set) public var appUser = ReplaySubject<AppUser>.createUnbounded()
@@ -27,7 +27,7 @@ class UserService {
     /// Private initializer for singleton magic
     private init() {
         self.authInstance = Auth.auth()
-        self.appUsersCollection = Firestore.firestore().collection("users")
+        self.appUsersRef = Firestore.firestore().collection("users")
     }
 
     /// Sign into Firebase with a email address and password
@@ -42,7 +42,7 @@ class UserService {
                     self.appUser.on(.error(error))
                     return
                 }
-
+                
                 self.updateAuthResult(authResult: authResult, firebaseUser: result!.user) { self.performOptionalCallback(completion, $0) }
             }
             return
@@ -68,7 +68,7 @@ class UserService {
 
     /// Update an AppUser object
     public func updateAppUser(_ appUser: AppUser, completion: ((Bool) -> ())? = nil) {
-        let appUserDocument = Document<AppUser>(id: appUser.userID!, collectionReference: self.appUsersCollection)
+        let appUserDocument = Document<AppUser>(id: appUser.userID!, collectionReference: self.appUsersRef)
 
         appUserDocument.data = appUser
         appUserDocument.save() { error in
@@ -84,7 +84,7 @@ class UserService {
 
     /// Delete an AppUser. This also delete the Firebase user! Warning!
     public func deleteAppUser(_ appUser: AppUser, email: String, password: String, completion: ((Bool) -> ())? = nil) {
-        let appUserDocument = Document<AppUser>(id: appUser.userID!, collectionReference: self.appUsersCollection)
+        let appUserDocument = Document<AppUser>(id: appUser.userID!, collectionReference: self.appUsersRef)
 
         self.signIn(email: email, password: password) { (authResult) in
             if authResult.success {
@@ -111,7 +111,7 @@ class UserService {
 
     /// Update the AuthorizationResult object with the AppUser data and change the success flag to true or false depending on the AppUser being nil
     private func updateAuthResult(authResult: AuthorizationResult, firebaseUser: FirebaseAuth.User, completion: @escaping (AuthorizationResult) -> ()) {
-        let appUserDocument = Document<AppUser>(id: firebaseUser.uid, collectionReference: self.appUsersCollection)
+        let appUserDocument = Document<AppUser>(id: firebaseUser.uid, collectionReference: self.appUsersRef)
 
         var authResult = authResult
 
@@ -130,7 +130,7 @@ class UserService {
                 self.performOptionalCallback(completion, authResult)
             } else {
                 let appUser = AppUser(userID: firebaseUser.uid)
-                self.appUsersCollection.document(firebaseUser.uid).setData(from: appUser) { error in
+                self.appUsersRef.document(firebaseUser.uid).setData(from: appUser) { error in
                     if let error = error {
                         authResult.success = false
                         authResult.errorMessage = error.localizedDescription
