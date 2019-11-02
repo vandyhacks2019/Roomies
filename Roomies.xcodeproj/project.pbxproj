@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5230C93D236D7E26008ACBC8 /* ObjectMapper+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230C93C236D7E26008ACBC8 /* ObjectMapper+Firebase.swift */; };
 		890BFFD46CF27955F4E32B7A /* Pods_Roomies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8DE0F7D87F74310E47D90 /* Pods_Roomies.framework */; };
 		8A1A86F4236D3C2C009D1D02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A86F3236D3C2C009D1D02 /* AppDelegate.swift */; };
 		8A1A86F6236D3C2C009D1D02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A86F5236D3C2C009D1D02 /* SceneDelegate.swift */; };
@@ -15,22 +14,21 @@
 		8A1A86FB236D3C2C009D1D02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86F9236D3C2C009D1D02 /* Main.storyboard */; };
 		8A1A86FD236D3C2F009D1D02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86FC236D3C2F009D1D02 /* Assets.xcassets */; };
 		8A1A8700236D3C2F009D1D02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86FE236D3C2F009D1D02 /* LaunchScreen.storyboard */; };
-		8A1A8709236D42E4009D1D02 /* LivingSpaceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8708236D42E4009D1D02 /* LivingSpaceItem.swift */; };
 		8A1A8711236D4583009D1D02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A8710236D4583009D1D02 /* GoogleService-Info.plist */; };
 		8A1A8713236D4B48009D1D02 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8712236D4B48009D1D02 /* AppUser.swift */; };
 		8A1A8716236D4F79009D1D02 /* AppUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8715236D4F79009D1D02 /* AppUserProtocol.swift */; };
 		8A1A8718236D4FB8009D1D02 /* BaseItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8717236D4FB8009D1D02 /* BaseItemProtocol.swift */; };
 		8A1A871A236D5091009D1D02 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8719236D5091009D1D02 /* Bill.swift */; };
 		8A1A871C236D50EA009D1D02 /* BillProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A871B236D50EA009D1D02 /* BillProtocol.swift */; };
-		8A1A871E236D5252009D1D02 /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A871D236D5252009D1D02 /* Chore.swift */; };
 		8A1A8720236D531E009D1D02 /* ChoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A871F236D531E009D1D02 /* ChoreProtocol.swift */; };
 		8A1A8722236D537D009D1D02 /* Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8721236D537D009D1D02 /* Grocery.swift */; };
 		8A1A8724236D53BC009D1D02 /* CommentedItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8723236D53BC009D1D02 /* CommentedItemProtocol.swift */; };
 		8A1A8726236D53F6009D1D02 /* MiscellaneousItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8725236D53F6009D1D02 /* MiscellaneousItem.swift */; };
-		8A1A872A236D57B3009D1D02 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8729236D57B3009D1D02 /* UserService.swift */; };
 		8A1A872F236D6B16009D1D02 /* AuthorizationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A872E236D6B16009D1D02 /* AuthorizationResult.swift */; };
 		8A1A8731236D6BDC009D1D02 /* BaseUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8730236D6BDC009D1D02 /* BaseUserData.swift */; };
 		8A6C1805236D840100816239 /* yeet.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A6C1804236D840100816239 /* yeet.png */; };
+		8A6C1808236D8C3800816239 /* BaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1807236D8C3800816239 /* BaseItem.swift */; };
+		8A6C1809236D8C4300816239 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8729236D57B3009D1D02 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +44,6 @@
 		8A1A86FC236D3C2F009D1D02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A1A86FF236D3C2F009D1D02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A1A8701236D3C2F009D1D02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A1A8708236D42E4009D1D02 /* LivingSpaceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingSpaceItem.swift; sourceTree = "<group>"; };
 		8A1A8710236D4583009D1D02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8A1A8712236D4B48009D1D02 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		8A1A8715236D4F79009D1D02 /* AppUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserProtocol.swift; sourceTree = "<group>"; };
@@ -62,6 +59,7 @@
 		8A1A872E236D6B16009D1D02 /* AuthorizationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResult.swift; sourceTree = "<group>"; };
 		8A1A8730236D6BDC009D1D02 /* BaseUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUserData.swift; sourceTree = "<group>"; };
 		8A6C1804236D840100816239 /* yeet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yeet.png; sourceTree = "<group>"; };
+		8A6C1807236D8C3800816239 /* BaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +98,7 @@
 				8A1A86F1236D3C2C009D1D02 /* Products */,
 				811E79F6B3415A43AFE68BC1 /* Pods */,
 				2F759D619562ABD061A5CEEF /* Frameworks */,
+				8A6C1806236D8B3600816239 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,7 +129,7 @@
 		8A1A8707236D4291009D1D02 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8A1A8708236D42E4009D1D02 /* BaseItem.swift */,
+				8A6C1807236D8C3800816239 /* BaseItem.swift */,
 				8A1A8712236D4B48009D1D02 /* AppUser.swift */,
 				8A1A8719236D5091009D1D02 /* Bill.swift */,
 				8A1A871D236D5252009D1D02 /* Chore.swift */,
@@ -138,14 +137,6 @@
 				8A1A8725236D53F6009D1D02 /* MiscellaneousItem.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		8A1A870C236D44B3009D1D02 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				5230C93C236D7E26008ACBC8 /* ObjectMapper+Firebase.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8A1A870F236D4578009D1D02 /* Configuration */ = {
@@ -195,6 +186,14 @@
 				8A1A8730236D6BDC009D1D02 /* BaseUserData.swift */,
 			);
 			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		8A6C1806236D8B3600816239 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				5230C93C236D7E26008ACBC8 /* ObjectMapper+Firebase.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,17 +314,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A1A871A236D5091009D1D02 /* Bill.swift in Sources */,
-				8A1A8709236D42E4009D1D02 /* BaseItem.swift in Sources */,
 				8A1A8713236D4B48009D1D02 /* AppUser.swift in Sources */,
 				8A1A8718236D4FB8009D1D02 /* BaseItemProtocol.swift in Sources */,
 				8A1A872F236D6B16009D1D02 /* AuthorizationResult.swift in Sources */,
 				8A1A8716236D4F79009D1D02 /* AppUserProtocol.swift in Sources */,
 				8A1A8720236D531E009D1D02 /* ChoreProtocol.swift in Sources */,
 				8A1A86F8236D3C2C009D1D02 /* ViewController.swift in Sources */,
+				8A6C1809236D8C4300816239 /* UserService.swift in Sources */,
 				8A1A8726236D53F6009D1D02 /* MiscellaneousItem.swift in Sources */,
 				8A1A8724236D53BC009D1D02 /* CommentedItemProtocol.swift in Sources */,
 				8A1A86F4236D3C2C009D1D02 /* AppDelegate.swift in Sources */,
-				5230C93D236D7E26008ACBC8 /* ObjectMapper+Firebase.swift in Sources */,
+				8A6C1808236D8C3800816239 /* BaseItem.swift in Sources */,
 				8A1A86F6236D3C2C009D1D02 /* SceneDelegate.swift in Sources */,
 				8A1A871C236D50EA009D1D02 /* BillProtocol.swift in Sources */,
 				8A1A8722236D537D009D1D02 /* Grocery.swift in Sources */,
