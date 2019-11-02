@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		527EB39E236DF1EA00FD7F5F /* PieTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527EB39D236DF1EA00FD7F5F /* PieTestData.swift */; };
-		52F29F4D236DE87500DDEA9E /* Cody.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F29F4B236DE87500DDEA9E /* Cody.storyboard */; };
-		890BFFD46CF27955F4E32B7A /* Pods_Roomies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8DE0F7D87F74310E47D90 /* Pods_Roomies.framework */; };
+		52F29F4D236DE87500DDEA9E /* (null) in Resources */ = {isa = PBXBuildFile; };
 		8A1A86F4236D3C2C009D1D02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A86F3236D3C2C009D1D02 /* AppDelegate.swift */; };
 		8A1A86F6236D3C2C009D1D02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A86F5236D3C2C009D1D02 /* SceneDelegate.swift */; };
-		8A1A86F8236D3C2C009D1D02 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A86F7236D3C2C009D1D02 /* DashboardViewController.swift */; };
 		8A1A86FB236D3C2C009D1D02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86F9236D3C2C009D1D02 /* Main.storyboard */; };
 		8A1A86FD236D3C2F009D1D02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86FC236D3C2F009D1D02 /* Assets.xcassets */; };
 		8A1A8700236D3C2F009D1D02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86FE236D3C2F009D1D02 /* LaunchScreen.storyboard */; };
