@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52F29F4A236DDE8300DDEA9E /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F29F49236DDE8300DDEA9E /* Charts.framework */; };
 		890BFFD46CF27955F4E32B7A /* Pods_Roomies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8DE0F7D87F74310E47D90 /* Pods_Roomies.framework */; };
 		8A1A86F4236D3C2C009D1D02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A86F3236D3C2C009D1D02 /* AppDelegate.swift */; };
 		8A1A86F6236D3C2C009D1D02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A86F5236D3C2C009D1D02 /* SceneDelegate.swift */; };
@@ -32,9 +33,23 @@
 		8A6C1809236D8C4300816239 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8729236D57B3009D1D02 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5223A620236DD29C00E3CBB3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		330709A13BC15D0165F4EB9B /* Pods-Roomies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomies.release.xcconfig"; path = "Target Support Files/Pods-Roomies/Pods-Roomies.release.xcconfig"; sourceTree = "<group>"; };
 		5230C93C236D7E26008ACBC8 /* ObjectMapper+Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ObjectMapper+Firebase.swift"; path = "../../../../.Trash/ObjectMapper+Firebase.swift"; sourceTree = "<group>"; };
+		52F29F49236DDE8300DDEA9E /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD8DE0F7D87F74310E47D90 /* Pods_Roomies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roomies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E38A93030A87F57F170C749 /* Pods-Roomies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomies.debug.xcconfig"; path = "Target Support Files/Pods-Roomies/Pods-Roomies.debug.xcconfig"; sourceTree = "<group>"; };
 		8A1A86F0236D3C2C009D1D02 /* Roomies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F29F4A236DDE8300DDEA9E /* Charts.framework in Frameworks */,
 				890BFFD46CF27955F4E32B7A /* Pods_Roomies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,6 +95,7 @@
 		2F759D619562ABD061A5CEEF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52F29F49236DDE8300DDEA9E /* Charts.framework */,
 				5AD8DE0F7D87F74310E47D90 /* Pods_Roomies.framework */,
 			);
 			name = Frameworks;
@@ -211,6 +228,7 @@
 				8A1A86ED236D3C2C009D1D02 /* Frameworks */,
 				8A1A86EE236D3C2C009D1D02 /* Resources */,
 				1B8295EE6E60188EAEAAB11C /* [CP] Embed Pods Frameworks */,
+				5223A620236DD29C00E3CBB3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -416,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -470,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
