@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ActivityViewController.swift
 //  Roomies
 //
 //  Created by MBP13 on 11/2/19.
@@ -7,9 +7,3 @@
 //
 
 import Foundation
-import UIKit
-
-class ViewController: UIViewController {
-
-
-}

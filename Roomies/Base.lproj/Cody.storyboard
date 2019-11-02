@@ -116,7 +116,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4b-Tj-Xmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1483" y="-567"/>
+            <point key="canvasLocation" x="-1542" y="-567"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="85U-lm-iE3">
@@ -185,10 +185,10 @@
             </objects>
             <point key="canvasLocation" x="184" y="-567"/>
         </scene>
-        <!--View Controller-->
+        <!--Dashboard View Controller-->
         <scene sceneID="2Pz-4G-hHY">
             <objects>
-                <viewController id="tdJ-ST-FLc" sceneMemberID="viewController">
+                <viewController id="tdJ-ST-FLc" customClass="DashboardViewController" customModule="Roomies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uHW-Ld-ZsA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,16 +198,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="tfValue:forEvent:" destination="Sg5-Wf-Mue" eventType="editingDidEnd" id="QGC-tr-BwN"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCj-wo-CIN">
                                 <rect key="frame" x="313" y="22" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="add:" destination="Sg5-Wf-Mue" eventType="touchUpInside" id="3lB-S6-Yz8"/>
+                                    <action selector="btnAddTapped:" destination="Sg5-Wf-Mue" eventType="touchUpInside" id="U5A-fb-T8w"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0b-4G-BsF" customClass="PieChartView" customModule="Charts">
@@ -219,6 +216,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="GNb-Ik-q7D"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="f8X-AI-Ode" id="NiC-au-VqM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1o3-PH-KN4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Sg5-Wf-Mue" userLabel="Exit" sceneMemberID="exit"/>
