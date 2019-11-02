@@ -14,9 +14,6 @@ import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    private var appUserSubscription: Disposable?
-    private var createLivingSpaceSubscription: Disposable?
-
     /**
      let ref: StorageReference = Storage.storage().reference().child("/a")
      let data: Data = UIImage(named: "yeet.png")!.pngData()!
@@ -34,46 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         BallcapApp.configure(Firestore.firestore().document("version/1"))
-
-        self.appUserSubscription = UserService.sharedInstance.appUser.subscribe { (event: Event) in
-            if let appUser = event.element {
-                print("AppUser \(appUser)")
-
-                var livingSpaceAddress = PhysicalAddress()
-                livingSpaceAddress.streetNumber = "69"
-                livingSpaceAddress.streetName = "Mary Jane Ln."
-                livingSpaceAddress.city = "Denver"
-                livingSpaceAddress.state = "CO"
-                livingSpaceAddress.zipCode = "69420"
-                livingSpaceAddress.country = "United States of America"
-                
-                self.createLivingSpaceSubscription = LivingSpaceService.sharedInstance
-                    .createLivingSpace(forUser: appUser, name: "Test Living Space", address: livingSpaceAddress)
-                    .catchError({ (error) -> Observable<Document<LivingSpace>> in
-                        return LivingSpaceService.sharedInstance.fetchLivingSpace(forAddress: livingSpaceAddress)
-                    })
-                    .subscribe { (createEvent) in
-                        if let createError = createEvent.error {
-                            print("Error: \(createError)")
-                        } else if let livingSpaceDocument = createEvent.element, let livingSpace = livingSpaceDocument.data {
-                            print("LivingSpace \(livingSpace)")
-                        } else {
-                            print(event)
-                        }
-                        self.createLivingSpaceSubscription?.dispose()
-
-                }
-                
-                
-
-            } else if let error = event.error {
-                print("Error \(error)")
-            } else {
-                print(event)
-            }
-
-            self.appUserSubscription!.dispose()
-        }
 
         UserService.sharedInstance.signIn(email: "test@test.com", password: "test123")
 

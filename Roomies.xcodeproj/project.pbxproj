@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		527EB39E236DF1EA00FD7F5F /* PieTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527EB39D236DF1EA00FD7F5F /* PieTestData.swift */; };
-		527EB3A1236E1C0700FD7F5F /* Pods_Roomies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8DE0F7D87F74310E47D90 /* Pods_Roomies.framework */; };
-		527EB3A2236E1C0700FD7F5F /* Pods_Roomies.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8DE0F7D87F74310E47D90 /* Pods_Roomies.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52F29F4D236DE87500DDEA9E /* Cody.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F29F4B236DE87500DDEA9E /* Cody.storyboard */; };
+		890BFFD46CF27955F4E32B7A /* Pods_Roomies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8DE0F7D87F74310E47D90 /* Pods_Roomies.framework */; };
 		8A1A86F4236D3C2C009D1D02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A86F3236D3C2C009D1D02 /* AppDelegate.swift */; };
 		8A1A86F6236D3C2C009D1D02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A86F5236D3C2C009D1D02 /* SceneDelegate.swift */; };
+		8A1A86F8236D3C2C009D1D02 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A86F7236D3C2C009D1D02 /* DashboardViewController.swift */; };
 		8A1A86FB236D3C2C009D1D02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86F9236D3C2C009D1D02 /* Main.storyboard */; };
 		8A1A86FD236D3C2F009D1D02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86FC236D3C2F009D1D02 /* Assets.xcassets */; };
 		8A1A8700236D3C2F009D1D02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86FE236D3C2F009D1D02 /* LaunchScreen.storyboard */; };
@@ -37,6 +38,8 @@
 		8A6C1817236DC98300816239 /* PhysicalAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1816236DC98300816239 /* PhysicalAddress.swift */; };
 		8A6C1819236DCA8200816239 /* PhysicalAddressProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1818236DCA8200816239 /* PhysicalAddressProtocol.swift */; };
 		8A6C181B236DCFA900816239 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C181A236DCFA900816239 /* DataError.swift */; };
+		8A6C181E236DF27400816239 /* LivingSpaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C181D236DF27400816239 /* LivingSpaceListViewController.swift */; };
+		8A6C1820236E002F00816239 /* ChoresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C181F236E002F00816239 /* ChoresService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -93,6 +96,8 @@
 		8A6C1816236DC98300816239 /* PhysicalAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalAddress.swift; sourceTree = "<group>"; };
 		8A6C1818236DCA8200816239 /* PhysicalAddressProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalAddressProtocol.swift; sourceTree = "<group>"; };
 		8A6C181A236DCFA900816239 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		8A6C181D236DF27400816239 /* LivingSpaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingSpaceListViewController.swift; sourceTree = "<group>"; };
+		8A6C181F236E002F00816239 /* ChoresService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +160,7 @@
 		8A1A86F2236D3C2C009D1D02 /* Roomies */ = {
 			isa = PBXGroup;
 			children = (
+				8A6C181C236DF21900816239 /* View Controllers */,
 				8A6C1804236D840100816239 /* yeet.png */,
 				8A1A8727236D552C009D1D02 /* Firebase */,
 				8A1A86F3236D3C2C009D1D02 /* AppDelegate.swift */,
@@ -226,6 +232,7 @@
 			children = (
 				8A1A8729236D57B3009D1D02 /* UserService.swift */,
 				8A6C180A236DBB2900816239 /* LivingSpaceService.swift */,
+				8A6C181F236E002F00816239 /* ChoresService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -246,6 +253,14 @@
 				5230C93C236D7E26008ACBC8 /* ObjectMapper+Firebase.swift */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		8A6C181C236DF21900816239 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A6C181D236DF27400816239 /* LivingSpaceListViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +325,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A1A8700236D3C2F009D1D02 /* LaunchScreen.storyboard in Resources */,
+				52F29F4D236DE87500DDEA9E /* Cody.storyboard in Resources */,
+				8A6C1805236D840100816239 /* yeet.png in Resources */,
 				8A1A8711236D4583009D1D02 /* GoogleService-Info.plist in Resources */,
 				8A1A86FD236D3C2F009D1D02 /* Assets.xcassets in Resources */,
 				8A1A86FB236D3C2C009D1D02 /* Main.storyboard in Resources */,
@@ -379,6 +396,8 @@
 				8A6C1809236D8C4300816239 /* UserService.swift in Sources */,
 				8A6C1811236DBD3700816239 /* BulletinBoard.swift in Sources */,
 				8A1A8726236D53F6009D1D02 /* MiscellaneousItem.swift in Sources */,
+				8A6C181E236DF27400816239 /* LivingSpaceListViewController.swift in Sources */,
+				8A6C1820236E002F00816239 /* ChoresService.swift in Sources */,
 				8A6C180B236DBB2900816239 /* LivingSpaceService.swift in Sources */,
 				8A6C1819236DCA8200816239 /* PhysicalAddressProtocol.swift in Sources */,
 				8A1A8724236D53BC009D1D02 /* CommentedItemProtocol.swift in Sources */,
