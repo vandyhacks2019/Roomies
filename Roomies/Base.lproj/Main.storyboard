@@ -138,9 +138,6 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Jlt-tY-xbZ" firstAttribute="top" secondItem="vyq-0b-Xr0" secondAttribute="top" id="XTr-yI-deR"/>
-                                </constraints>
                                 <viewLayoutGuide key="safeArea" id="vyq-0b-Xr0"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwn-b3-zRi">
