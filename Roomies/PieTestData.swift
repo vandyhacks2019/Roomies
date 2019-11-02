@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProfileViewController.swift
 //  Roomies
 //
 //  Created by MBP13 on 11/2/19.
@@ -7,9 +7,11 @@
 //
 
 import Foundation
-import UIKit
 
-class ViewController: UIViewController {
-
-
+class VisitorCount: Object {
+    var count: Double;
+    init() {
+        <#statements#>
+    }
+    
 }
