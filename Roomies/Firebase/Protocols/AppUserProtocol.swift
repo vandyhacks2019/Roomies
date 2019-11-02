@@ -12,5 +12,5 @@ import FirebaseFirestore
 public protocol AppUserProtocol {
     var name: String? { get set }
     var profilePicture: File? { get set }
-    var userID: String { get }
+    var userID: String? { get }
 }

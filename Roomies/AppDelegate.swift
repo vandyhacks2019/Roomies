@@ -24,8 +24,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.appUserSubscription = UserService.sharedInstance.appUser.subscribe { (event: Event) in
             if let appUser = event.element {
                 print("AppUser \(appUser)")
+                let ref: StorageReference = Storage.storage().reference().child("/a")
+                let data: Data = UIImage(named: "yeet.png")!.pngData()!
+                let file: File = File(ref, data: data, mimeType: .png)
+                file.save { (metadata, error) in
+                    var appUser = appUser
+                    
+                    appUser.profilePicture = file
+                    UserService.sharedInstance.updateAppUser(appUser)
+                }
+                
+                
             } else if let error = event.error {
                 print("Error \(error)")
+            } else {
+                print(event)
             }
             
             self.appUserSubscription!.dispose()

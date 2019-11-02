@@ -29,6 +29,7 @@
 		8A1A872A236D57B3009D1D02 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8729236D57B3009D1D02 /* UserService.swift */; };
 		8A1A872F236D6B16009D1D02 /* AuthorizationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A872E236D6B16009D1D02 /* AuthorizationResult.swift */; };
 		8A1A8731236D6BDC009D1D02 /* BaseUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8730236D6BDC009D1D02 /* BaseUserData.swift */; };
+		8A6C1805236D840100816239 /* yeet.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A6C1804236D840100816239 /* yeet.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		8A1A8729236D57B3009D1D02 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		8A1A872E236D6B16009D1D02 /* AuthorizationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResult.swift; sourceTree = "<group>"; };
 		8A1A8730236D6BDC009D1D02 /* BaseUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUserData.swift; sourceTree = "<group>"; };
+		8A6C1804236D840100816239 /* yeet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yeet.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		8A1A86F2236D3C2C009D1D02 /* Roomies */ = {
 			isa = PBXGroup;
 			children = (
+				8A6C1804236D840100816239 /* yeet.png */,
 				8A1A8727236D552C009D1D02 /* Firebase */,
 				8A1A86F3236D3C2C009D1D02 /* AppDelegate.swift */,
 				8A1A86F5236D3C2C009D1D02 /* SceneDelegate.swift */,
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A1A8700236D3C2F009D1D02 /* LaunchScreen.storyboard in Resources */,
+				8A6C1805236D840100816239 /* yeet.png in Resources */,
 				8A1A8711236D4583009D1D02 /* GoogleService-Info.plist in Resources */,
 				8A1A86FD236D3C2F009D1D02 /* Assets.xcassets in Resources */,
 				8A1A86FB236D3C2C009D1D02 /* Main.storyboard in Resources */,

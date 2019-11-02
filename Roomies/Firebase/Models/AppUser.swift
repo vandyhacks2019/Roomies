@@ -12,5 +12,11 @@ struct AppUser: Modelable, Codable, AppUserProtocol {
     var itemType: ItemType = ItemType.AppUser
     var name: String?
     var profilePicture: File?
-    var userID: String = ""
+    var userID: String?
+
+    init() { }
+
+    init(userID: String) {
+        self.userID = userID
+    }
 }
