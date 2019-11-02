@@ -12,9 +12,9 @@ import Ballcap
 struct MiscellaneousItem: Codable, Modelable, BaseItemProtocol, CommentedItemProtocol {
     var itemType: ItemType = ItemType.MiscellaneousItem
     var name: String?
-    var createdBy: String?
+    var createdBy: String = ""
     var comment: String?
-    var createdOn: Date = Date()
+    var createdOn: ServerTimestamp = ServerTimestamp.pending
 
     init() { }
 

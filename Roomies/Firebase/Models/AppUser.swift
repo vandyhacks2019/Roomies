@@ -13,6 +13,7 @@ struct AppUser: Modelable, Codable, AppUserProtocol {
     var name: String?
     var profilePicture: File?
     var userID: String?
+    var livingSpaceAddresses: [PhysicalAddress]?
 
     init() { }
 

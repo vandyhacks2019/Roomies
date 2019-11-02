@@ -12,10 +12,10 @@ import Ballcap
 struct Bill: Codable, Modelable, BaseItemProtocol, BillProtocol {
     var itemType: ItemType = ItemType.Bill
     var name: String?
-    var createdBy: String?
+    var createdBy: String = ""
     var dueDate: Date?
     var users: [String: Double]?
-    var createdOn: Date = Date()
+    var createdOn: ServerTimestamp = ServerTimestamp.pending
 
     init() { }
 
