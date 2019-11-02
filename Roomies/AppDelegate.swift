@@ -16,6 +16,19 @@ import RxSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private var appUserSubscription: Disposable?
     
+    /**
+     let ref: StorageReference = Storage.storage().reference().child("/a")
+     let data: Data = UIImage(named: "yeet.png")!.pngData()!
+     let file: File = File(ref, data: data, mimeType: .png)
+     file.save { (metadata, error) in
+         var appUser = appUser
+         
+         appUser.profilePicture = file
+         UserService.sharedInstance.updateAppUser(appUser)
+     }
+     */
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
@@ -24,16 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.appUserSubscription = UserService.sharedInstance.appUser.subscribe { (event: Event) in
             if let appUser = event.element {
                 print("AppUser \(appUser)")
-                let ref: StorageReference = Storage.storage().reference().child("/a")
-                let data: Data = UIImage(named: "yeet.png")!.pngData()!
-                let file: File = File(ref, data: data, mimeType: .png)
-                file.save { (metadata, error) in
-                    var appUser = appUser
-                    
-                    appUser.profilePicture = file
-                    UserService.sharedInstance.updateAppUser(appUser)
-                }
                 
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    print("Deleting app user..")
+               //     UserService.sharedInstance.deleteAppUser(appUser, email: "test@test.com", password: "test123")
+                }
                 
             } else if let error = event.error {
                 print("Error \(error)")

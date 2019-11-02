@@ -39,6 +39,7 @@ class UserService {
                 if let error = error {
                     self.updateAuthResult(authResult: &authResult, errorMessage: error.localizedDescription)
                     self.performOptionalCallback(completion, authResult)
+                    self.appUser.on(.error(error))
                     return
                 }
 
@@ -81,24 +82,30 @@ class UserService {
         }
     }
 
-    public func deleteAppUser(_ appUser: AppUser, completion: ((Bool) -> ())? = nil) {
+    /// Delete an AppUser. This also delete the Firebase user! Warning!
+    public func deleteAppUser(_ appUser: AppUser, email: String, password: String, completion: ((Bool) -> ())? = nil) {
         let appUserDocument = Document<AppUser>(id: appUser.userID!, collectionReference: self.appUsersCollection)
 
-        appUserDocument.delete() { error in
-            if let error = error {
-                print("Could not delete appuser \(error)")
-                self.performOptionalCallback(completion, false)
-            } else {
-                self.authInstance.currentUser!.delete { (error) in
+        self.signIn(email: email, password: password) { (authResult) in
+            if authResult.success {
+                appUserDocument.delete() { error in
                     if let error = error {
-                        print("Could not delete firebase user \(error)")
+                        print("Could not delete appuser \(error)")
                         self.performOptionalCallback(completion, false)
                     } else {
-                        self.performOptionalCallback(completion, true)
+                        self.authInstance.currentUser!.delete { (error) in
+                            if let error = error {
+                                print("Could not delete firebase user \(error)")
+                                self.performOptionalCallback(completion, false)
+                            } else {
+                                self.performOptionalCallback(completion, true)
+                            }
+                        }
                     }
                 }
+            } else {
+                self.performOptionalCallback(completion, false)
             }
-
         }
     }
 
