@@ -40,6 +40,14 @@
 		8A6C181B236DCFA900816239 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C181A236DCFA900816239 /* DataError.swift */; };
 		8A6C181E236DF27400816239 /* LivingSpaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C181D236DF27400816239 /* LivingSpaceListViewController.swift */; };
 		8A6C1820236E002F00816239 /* ChoresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C181F236E002F00816239 /* ChoresService.swift */; };
+		8A6C1825236E082200816239 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1824236E082200816239 /* Validators.swift */; };
+		8A6C1828236E083F00816239 /* UITextField+Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1827236E083F00816239 /* UITextField+Validators.swift */; };
+		8A6C182A236E09B900816239 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1829236E09B900816239 /* RegisterViewController.swift */; };
+		8A6C182C236E09C600816239 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C182B236E09C600816239 /* LoginViewController.swift */; };
+		8A6C182E236E0CE100816239 /* Keaton.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6C182D236E0CE100816239 /* Keaton.storyboard */; };
+		8A6C1830236E0DAA00816239 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C182F236E0DAA00816239 /* InitialViewController.swift */; };
+		8A6C1833236E0FCB00816239 /* Cody.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6C1831236E0FCB00816239 /* Cody.storyboard */; };
+		8A6C1835236E134F00816239 /* DummyDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1834236E134F00816239 /* DummyDashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -98,6 +106,14 @@
 		8A6C181A236DCFA900816239 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		8A6C181D236DF27400816239 /* LivingSpaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingSpaceListViewController.swift; sourceTree = "<group>"; };
 		8A6C181F236E002F00816239 /* ChoresService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresService.swift; sourceTree = "<group>"; };
+		8A6C1824236E082200816239 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		8A6C1827236E083F00816239 /* UITextField+Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Validators.swift"; sourceTree = "<group>"; };
+		8A6C1829236E09B900816239 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8A6C182B236E09C600816239 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8A6C182D236E0CE100816239 /* Keaton.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keaton.storyboard; sourceTree = "<group>"; };
+		8A6C182F236E0DAA00816239 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		8A6C1832236E0FCB00816239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Cody.storyboard; sourceTree = "<group>"; };
+		8A6C1834236E134F00816239 /* DummyDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +140,9 @@
 		52F29F4E236DE90400DDEA9E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				8A6C1831236E0FCB00816239 /* Cody.storyboard */,
 				8A5D645E236DE8460060C6BC /* Arielle.storyboard */,
+				8A6C182D236E0CE100816239 /* Keaton.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -160,6 +178,8 @@
 		8A1A86F2236D3C2C009D1D02 /* Roomies */ = {
 			isa = PBXGroup;
 			children = (
+				8A6C1826236E082E00816239 /* Extensions */,
+				8A6C1823236E080900816239 /* Validators */,
 				8A6C181C236DF21900816239 /* View Controllers */,
 				8A6C1804236D840100816239 /* yeet.png */,
 				8A1A8727236D552C009D1D02 /* Firebase */,
@@ -259,8 +279,28 @@
 			isa = PBXGroup;
 			children = (
 				8A6C181D236DF27400816239 /* LivingSpaceListViewController.swift */,
+				8A6C1829236E09B900816239 /* RegisterViewController.swift */,
+				8A6C182B236E09C600816239 /* LoginViewController.swift */,
+				8A6C182F236E0DAA00816239 /* InitialViewController.swift */,
+				8A6C1834236E134F00816239 /* DummyDashboardViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8A6C1823236E080900816239 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				8A6C1824236E082200816239 /* Validators.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		8A6C1826236E082E00816239 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A6C1827236E083F00816239 /* UITextField+Validators.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,10 +365,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A1A8700236D3C2F009D1D02 /* LaunchScreen.storyboard in Resources */,
-				52F29F4D236DE87500DDEA9E /* Cody.storyboard in Resources */,
-				8A6C1805236D840100816239 /* yeet.png in Resources */,
+				8A6C182E236E0CE100816239 /* Keaton.storyboard in Resources */,
+				52F29F4D236DE87500DDEA9E /* (null) in Resources */,
 				8A1A8711236D4583009D1D02 /* GoogleService-Info.plist in Resources */,
 				8A1A86FD236D3C2F009D1D02 /* Assets.xcassets in Resources */,
+				8A6C1833236E0FCB00816239 /* Cody.storyboard in Resources */,
 				8A1A86FB236D3C2C009D1D02 /* Main.storyboard in Resources */,
 				8A5D6460236DE8460060C6BC /* Arielle.storyboard in Resources */,
 			);
@@ -388,18 +429,24 @@
 				8A1A8718236D4FB8009D1D02 /* BaseItemProtocol.swift in Sources */,
 				8A6C1813236DBD9F00816239 /* BulletinBoardProtocol.swift in Sources */,
 				8A1A872F236D6B16009D1D02 /* AuthorizationResult.swift in Sources */,
+				8A6C1835236E134F00816239 /* DummyDashboardViewController.swift in Sources */,
 				8A1A8716236D4F79009D1D02 /* AppUserProtocol.swift in Sources */,
 				527EB39E236DF1EA00FD7F5F /* PieTestData.swift in Sources */,
 				8A6C181B236DCFA900816239 /* DataError.swift in Sources */,
 				8A6C180D236DBCA700816239 /* LivingSpace.swift in Sources */,
+				8A6C182C236E09C600816239 /* LoginViewController.swift in Sources */,
+				8A6C1825236E082200816239 /* Validators.swift in Sources */,
 				8A6C1817236DC98300816239 /* PhysicalAddress.swift in Sources */,
 				8A6C1809236D8C4300816239 /* UserService.swift in Sources */,
 				8A6C1811236DBD3700816239 /* BulletinBoard.swift in Sources */,
 				8A1A8726236D53F6009D1D02 /* MiscellaneousItem.swift in Sources */,
 				8A6C181E236DF27400816239 /* LivingSpaceListViewController.swift in Sources */,
+				8A6C1828236E083F00816239 /* UITextField+Validators.swift in Sources */,
 				8A6C1820236E002F00816239 /* ChoresService.swift in Sources */,
 				8A6C180B236DBB2900816239 /* LivingSpaceService.swift in Sources */,
+				8A6C182A236E09B900816239 /* RegisterViewController.swift in Sources */,
 				8A6C1819236DCA8200816239 /* PhysicalAddressProtocol.swift in Sources */,
+				8A6C1830236E0DAA00816239 /* InitialViewController.swift in Sources */,
 				8A1A8724236D53BC009D1D02 /* CommentedItemProtocol.swift in Sources */,
 				8A6C1815236DBDED00816239 /* ItemType.swift in Sources */,
 				8A1A86F4236D3C2C009D1D02 /* AppDelegate.swift in Sources */,
@@ -436,6 +483,14 @@
 				8A5D645F236DE8460060C6BC /* Base */,
 			);
 			name = Arielle.storyboard;
+			sourceTree = "<group>";
+		};
+		8A6C1831236E0FCB00816239 /* Cody.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A6C1832236E0FCB00816239 /* Base */,
+			);
+			name = Cody.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

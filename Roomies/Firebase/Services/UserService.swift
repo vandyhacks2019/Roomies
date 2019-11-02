@@ -28,7 +28,11 @@ class UserService {
     private init() {
         self.authInstance = Auth.auth()
         self.appUsersRef = Firestore.firestore().collection("users")
-        
+    }
+
+    /// Checks to see if an AppUser entity is available on the Firebase backend
+    public func validateAppUser(forFirebaseUser firebaseUser: FirebaseAuth.User, completion: ((AuthorizationResult) -> ())? = nil) {
+        self.updateAuthResult(authResult: AuthorizationResult(), firebaseUser: firebaseUser) { self.performOptionalCallback(completion, $0) }
     }
 
     /// Sign into Firebase with a email address and password
@@ -43,7 +47,7 @@ class UserService {
                     self.appUser.on(.error(error))
                     return
                 }
-                
+
                 self.updateAuthResult(authResult: authResult, firebaseUser: result!.user) { self.performOptionalCallback(completion, $0) }
             }
             return
@@ -107,6 +111,20 @@ class UserService {
             } else {
                 self.performOptionalCallback(completion, false)
             }
+        }
+    }
+
+    public func signOut() -> Observable<Bool> {
+        return Observable.create { observer in
+            do {
+                try self.authInstance.signOut()
+                observer.onNext(true)
+            } catch let signOutError {
+                print(signOutError)
+                observer.onError(signOutError)
+            }
+            observer.onNext(true)
+            return Disposables.create()
         }
     }
 
