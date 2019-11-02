@@ -133,15 +133,18 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2A-pw-wEd" userLabel="Password">
-                                        <rect key="frame" x="0.0" y="55" width="335" height="34"/>
+                                        <rect key="frame" x="0.0" y="55" width="335" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Jlt-tY-xbZ" firstAttribute="height" secondItem="Y2A-pw-wEd" secondAttribute="height" id="GWE-5h-8DS"/>
+                                </constraints>
                                 <viewLayoutGuide key="safeArea" id="vyq-0b-Xr0"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwn-b3-zRi">
-                                <rect key="frame" x="188.5" y="378" width="38" height="40"/>
+                                <rect key="frame" x="188.5" y="384" width="38" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="p9y-jL-YEd"/>
                                 </constraints>
@@ -179,7 +182,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4b-Tj-Xmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1571" y="-567"/>
+            <point key="canvasLocation" x="-1483" y="-567"/>
         </scene>
     </scenes>
 </document>
