@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		8A1A86FB236D3C2C009D1D02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86F9236D3C2C009D1D02 /* Main.storyboard */; };
 		8A1A86FD236D3C2F009D1D02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86FC236D3C2F009D1D02 /* Assets.xcassets */; };
 		8A1A8700236D3C2F009D1D02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A86FE236D3C2F009D1D02 /* LaunchScreen.storyboard */; };
+		8A1A8709236D42E4009D1D02 /* LivingSpaceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A8708236D42E4009D1D02 /* LivingSpaceItem.swift */; };
+		8A1A870E236D44CE009D1D02 /* ObjectMapper+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A870D236D44CE009D1D02 /* ObjectMapper+Firebase.swift */; };
+		8A1A8711236D4583009D1D02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A1A8710236D4583009D1D02 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		8A1A86FC236D3C2F009D1D02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A1A86FF236D3C2F009D1D02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A1A8701236D3C2F009D1D02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A1A8708236D42E4009D1D02 /* LivingSpaceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingSpaceItem.swift; sourceTree = "<group>"; };
+		8A1A870D236D44CE009D1D02 /* ObjectMapper+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectMapper+Firebase.swift"; sourceTree = "<group>"; };
+		8A1A8710236D4583009D1D02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,6 @@
 				7E38A93030A87F57F170C749 /* Pods-Roomies.debug.xcconfig */,
 				330709A13BC15D0165F4EB9B /* Pods-Roomies.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +86,9 @@
 		8A1A86F2236D3C2C009D1D02 /* Roomies */ = {
 			isa = PBXGroup;
 			children = (
+				8A1A870F236D4578009D1D02 /* Configuration */,
+				8A1A870C236D44B3009D1D02 /* Extensions */,
+				8A1A8707236D4291009D1D02 /* Models */,
 				8A1A86F3236D3C2C009D1D02 /* AppDelegate.swift */,
 				8A1A86F5236D3C2C009D1D02 /* SceneDelegate.swift */,
 				8A1A86F7236D3C2C009D1D02 /* ViewController.swift */,
@@ -90,6 +98,30 @@
 				8A1A8701236D3C2F009D1D02 /* Info.plist */,
 			);
 			path = Roomies;
+			sourceTree = "<group>";
+		};
+		8A1A8707236D4291009D1D02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A8708236D42E4009D1D02 /* LivingSpaceItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A1A870C236D44B3009D1D02 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A870D236D44CE009D1D02 /* ObjectMapper+Firebase.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8A1A870F236D4578009D1D02 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A8710236D4583009D1D02 /* GoogleService-Info.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A1A8700236D3C2F009D1D02 /* LaunchScreen.storyboard in Resources */,
+				8A1A8711236D4583009D1D02 /* GoogleService-Info.plist in Resources */,
 				8A1A86FD236D3C2F009D1D02 /* Assets.xcassets in Resources */,
 				8A1A86FB236D3C2C009D1D02 /* Main.storyboard in Resources */,
 			);
@@ -207,8 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A1A8709236D42E4009D1D02 /* LivingSpaceItem.swift in Sources */,
 				8A1A86F8236D3C2C009D1D02 /* ViewController.swift in Sources */,
 				8A1A86F4236D3C2C009D1D02 /* AppDelegate.swift in Sources */,
+				8A1A870E236D44CE009D1D02 /* ObjectMapper+Firebase.swift in Sources */,
 				8A1A86F6236D3C2C009D1D02 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

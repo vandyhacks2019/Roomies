@@ -9,5 +9,7 @@ target 'Roomies' do
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'ObjectMapper'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 end

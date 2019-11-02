@@ -1,2 +1,4 @@
 .DS_Store
 Pods/
+Roomies.xcworkspace/xcshareddata/*
+Roomies.xcodeproj/xcuserdata/keatonburleson.xcuserdatad/xcschemes/xcschememanagement.plist
