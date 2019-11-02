@@ -8,4 +8,5 @@ target 'Roomies' do
   pod 'Ballcap'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Charts'
 end
