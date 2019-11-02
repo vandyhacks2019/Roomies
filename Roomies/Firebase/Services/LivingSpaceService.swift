@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import FirebaseFirestore
+import FirebaseAuth
 import Ballcap
 
 class LivingSpaceService {
@@ -36,6 +37,20 @@ class LivingSpaceService {
             }
         })
     }
+    
+    public func fetchLivingSpaces() -> DataSource<Document<LivingSpace>> {
+        let currentUserID = Auth.auth().currentUser!.uid
+        let query: DataSource<Document<LivingSpace>>.Query = DataSource.Query(self.livingSpacesRef.whereField("residents", arrayContains: currentUserID))
+        let dataSource = DataSource(reference: query)
+
+        return dataSource.retrieve(from: { (snapshot, documentSnapshot, done) in
+            let document: Document<LivingSpace> = Document(documentSnapshot.reference)
+            document.get { (item, error) in
+                done(item!)
+            }
+        })
+    }
+
 
     /// Fetch a living space, looking it up by a PhysicalAddress object
     public func fetchLivingSpace(forAddress address: PhysicalAddress) -> Observable<Document<LivingSpace>> {

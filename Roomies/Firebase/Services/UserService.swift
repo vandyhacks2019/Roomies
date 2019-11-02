@@ -28,6 +28,7 @@ class UserService {
     private init() {
         self.authInstance = Auth.auth()
         self.appUsersRef = Firestore.firestore().collection("users")
+        
     }
 
     /// Sign into Firebase with a email address and password
