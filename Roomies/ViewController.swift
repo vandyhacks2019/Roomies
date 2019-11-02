@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func tfValue(_ sender: UITextField, forEvent event: UIEvent) {
+    
+        
+    
+    }
+   
+    @IBAction func add(_ sender: UIButton) {
+    
+    }
 }
 

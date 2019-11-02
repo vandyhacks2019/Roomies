@@ -12,4 +12,7 @@ target 'Roomies' do
   # RxGarbage
   pod 'RxSwift'
   pod 'RxCocoa'
+
+  # UI
+  pod 'Charts'
 end

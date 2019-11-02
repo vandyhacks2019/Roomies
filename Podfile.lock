@@ -9,6 +9,9 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.3):
     - BoringSSL-GRPC/Interface (= 0.0.3)
   - BoringSSL-GRPC/Interface (0.0.3)
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
   - Firebase (6.11.0):
     - Firebase/Core (= 6.11.0)
   - Firebase/Auth (6.11.0):
@@ -137,6 +140,7 @@ PODS:
 
 DEPENDENCIES:
   - Ballcap
+  - Charts
   - Firebase/Auth
   - Firebase/Firestore
   - RxCocoa
@@ -146,6 +150,7 @@ SPEC REPOS:
   trunk:
     - Ballcap
     - BoringSSL-GRPC
+    - Charts
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -173,6 +178,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Ballcap: 72088fbc45de9af82b0541cc74e0ecc3ff5a7c05
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   Firebase: bc9cfc7a96c73268656d5aaab453ff1b4b530e0e
   FirebaseAnalytics: 0e3ecff2c5d86070f7d4325e21f1edabfbd558dc
   FirebaseAuth: b401a012cc33b04df3b52bb308b04e8766f2693e
@@ -198,5 +204,6 @@ SPEC CHECKSUMS:
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
 
 PODFILE CHECKSUM: 3bedcc0f1e145ff0cf642d1d32e2786cb1c07dcc
+PODFILE CHECKSUM: ab10f8d0717e35dc4c52e3c5dbd55b7ee1b4f96d
 
 COCOAPODS: 1.8.4
