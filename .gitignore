@@ -3,3 +3,5 @@ Pods/
 Roomies.xcworkspace/xcshareddata/*
 Roomies.xcodeproj/xcuserdata/keatonburleson.xcuserdatad/xcschemes/xcschememanagement.plist
 Roomies.xcworkspace/xcuserdata/*
+*.xcuserstate
+Roomies.xcodeproj/xcshareddata/
