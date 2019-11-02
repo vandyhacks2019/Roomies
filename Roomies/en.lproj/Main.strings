@@ -1,0 +1,36 @@
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "0WR-so-wqE"; */
+"0WR-so-wqE.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "EyC-vs-s38"; */
+"EyC-vs-s38.normalTitle" = "Update";
+
+/* Class = "UILabel"; text = "Create Account"; ObjectID = "Ksm-D0-Djz"; */
+"Ksm-D0-Djz.text" = "Create Account";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "Sre-n8-39g"; */
+"Sre-n8-39g.text" = "Login";
+
+/* Class = "UITextField"; text = "Email"; ObjectID = "h5s-yR-zOx"; */
+"h5s-yR-zOx.text" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "jRZ-5m-oKu"; */
+"jRZ-5m-oKu.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "mEG-yq-EWC"; */
+"mEG-yq-EWC.normalTitle" = "Create Account";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "nuO-an-mo0"; */
+"nuO-an-mo0.placeholder" = "Full Name";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "oxz-4X-gt7"; */
+"oxz-4X-gt7.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "uH3-jB-lkg"; */
+"uH3-jB-lkg.normalTitle" = "Login";
+
+/* Class = "UITextField"; placeholder = "Confirm password"; ObjectID = "uwK-px-ZSK"; */
+"uwK-px-ZSK.placeholder" = "Confirm password";
+
+/* Class = "UITextField"; text = "Password"; ObjectID = "zzv-d4-41D"; */
+"zzv-d4-41D.text" = "Password";

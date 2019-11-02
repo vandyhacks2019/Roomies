@@ -206,7 +206,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="580-3v-Ih8" userLabel="Email">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="335" id="FuA-Px-OuT"/>
                                             <constraint firstAttribute="height" constant="40" id="ogp-Hl-xSV"/>
@@ -215,7 +215,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tA8-9s-G2h" userLabel="Password">
-                                        <rect key="frame" x="0.0" y="55" width="335" height="40"/>
+                                        <rect key="frame" x="0.0" y="49" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -236,7 +236,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjd-9Y-4hG">
-                                <rect key="frame" x="168.5" y="385" width="38" height="40"/>
+                                <rect key="frame" x="168.5" y="373" width="38" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="zkV-7O-9XV"/>
                                 </constraints>
@@ -268,7 +268,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dli-gj-wHF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dli-gj-wHF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGL-Hf-LIG">
@@ -293,7 +293,9 @@ To share blah blah, a summary or something </string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="dli-gj-wHF" firstAttribute="top" secondItem="H7h-57-Vtj" secondAttribute="top" constant="44" id="AlI-rl-Ae6"/>
                             <constraint firstItem="dli-gj-wHF" firstAttribute="leading" secondItem="H7h-57-Vtj" secondAttribute="leading" id="Dag-kN-gRj"/>
+                            <constraint firstItem="H7h-57-Vtj" firstAttribute="bottom" secondItem="dli-gj-wHF" secondAttribute="bottom" constant="646" id="Hxk-l7-yNa"/>
                             <constraint firstItem="H7h-57-Vtj" firstAttribute="trailing" secondItem="dli-gj-wHF" secondAttribute="trailing" id="VzJ-EN-4AN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H7h-57-Vtj"/>

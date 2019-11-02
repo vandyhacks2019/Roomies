@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XfK-JH-Z5k">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -131,7 +131,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5s-yR-zOx" userLabel="Email">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="335" id="37x-Hs-0PJ"/>
                                             <constraint firstAttribute="height" constant="40" id="iSf-Sw-fmJ"/>
@@ -140,7 +140,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zzv-d4-41D" userLabel="Password">
-                                        <rect key="frame" x="0.0" y="55" width="335" height="40"/>
+                                        <rect key="frame" x="0.0" y="49" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -161,7 +161,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRZ-5m-oKu">
-                                <rect key="frame" x="168.5" y="385" width="38" height="40"/>
+                                <rect key="frame" x="168.5" y="373" width="38" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="BaZ-5Z-4CI"/>
                                 </constraints>
@@ -193,37 +193,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZF-5f-eTN">
-                                <rect key="frame" x="16" y="20" width="289" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lxs-B9-tlS" userLabel="Name Field">
+                                <rect key="frame" x="62.5" y="99" width="289" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="289" id="f7R-wF-Ofl"/>
+                                    <constraint firstAttribute="height" constant="34" id="nx5-ne-oOB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyC-vs-s38">
-                                <rect key="frame" x="313" y="22" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZF-5f-eTN">
+                                <rect key="frame" x="62.5" y="141" width="289" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="GMx-y1-hhh"/>
+                                    <constraint firstAttribute="width" constant="289" id="a1U-iG-xw8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyC-vs-s38">
+                                <rect key="frame" x="182" y="183" width="51" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="Ry9-Go-bP8"/>
+                                </constraints>
+                                <state key="normal" title="Update"/>
                                 <connections>
+                                    <action selector="btnAddTapped:" destination="XfK-JH-Z5k" eventType="touchUpInside" id="LWX-Fi-5RN"/>
                                     <action selector="btnAddTapped:" destination="b4T-wd-TnN" eventType="touchUpInside" id="r3g-eQ-mV9"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sot-CX-gu0" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <rect key="frame" x="19" y="271" width="375" height="526"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Lxs-B9-tlS" firstAttribute="top" secondItem="7P4-ec-ED4" secondAttribute="top" constant="55" id="JU5-kX-mcj"/>
+                            <constraint firstItem="EyC-vs-s38" firstAttribute="leading" secondItem="7P4-ec-ED4" secondAttribute="leading" constant="182" id="StT-iM-Fcc"/>
+                            <constraint firstItem="Lxs-B9-tlS" firstAttribute="centerX" secondItem="3w8-sB-3P0" secondAttribute="centerX" id="o0V-yW-dfP"/>
+                            <constraint firstItem="AZF-5f-eTN" firstAttribute="centerX" secondItem="3w8-sB-3P0" secondAttribute="centerX" id="oxw-bM-utn"/>
+                            <constraint firstItem="AZF-5f-eTN" firstAttribute="top" secondItem="Lxs-B9-tlS" secondAttribute="bottom" constant="8" id="sQ2-x4-A3k"/>
+                            <constraint firstItem="7P4-ec-ED4" firstAttribute="trailing" secondItem="EyC-vs-s38" secondAttribute="trailing" constant="181" id="vTF-vL-CLf"/>
+                            <constraint firstItem="EyC-vs-s38" firstAttribute="top" secondItem="AZF-5f-eTN" secondAttribute="bottom" constant="8" id="yGh-2h-eiN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7P4-ec-ED4"/>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="AZF-5f-eTN" id="kJE-6n-SrJ"/>
+                        <outlet property="amountInput" destination="AZF-5f-eTN" id="P0Z-XT-ezy"/>
+                        <outlet property="nameInput" destination="Lxs-B9-tlS" id="JkV-Mf-SLp"/>
+                        <outlet property="pieChart" destination="sot-CX-gu0" id="Rmk-B6-Eld"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXc-gf-JL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="b4T-wd-TnN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="973.60000000000002" y="-567.16641679160421"/>
+            <point key="canvasLocation" x="972.46376811594212" y="-567.1875"/>
         </scene>
     </scenes>
 </document>

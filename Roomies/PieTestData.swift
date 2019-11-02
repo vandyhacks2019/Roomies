@@ -8,10 +8,6 @@
 
 import Foundation
 
-class VisitorCount: Object {
-    var count: Double;
-    init() {
-        <#statements#>
-    }
+
     
-}
+
