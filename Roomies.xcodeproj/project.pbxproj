@@ -48,6 +48,8 @@
 		8A6C1830236E0DAA00816239 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C182F236E0DAA00816239 /* InitialViewController.swift */; };
 		8A6C1833236E0FCB00816239 /* Cody.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6C1831236E0FCB00816239 /* Cody.storyboard */; };
 		8A6C1835236E134F00816239 /* DummyDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1834236E134F00816239 /* DummyDashboardViewController.swift */; };
+		8A6C1838236E230200816239 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1837236E230200816239 /* RoundedView.swift */; };
+		8A6C183A236E235700816239 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1839236E235700816239 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,7 +59,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				527EB3A2236E1C0700FD7F5F /* Pods_Roomies.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +115,8 @@
 		8A6C182F236E0DAA00816239 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		8A6C1832236E0FCB00816239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Cody.storyboard; sourceTree = "<group>"; };
 		8A6C1834236E134F00816239 /* DummyDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDashboardViewController.swift; sourceTree = "<group>"; };
+		8A6C1837236E230200816239 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		8A6C1839236E235700816239 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +124,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527EB3A1236E1C0700FD7F5F /* Pods_Roomies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +180,7 @@
 		8A1A86F2236D3C2C009D1D02 /* Roomies */ = {
 			isa = PBXGroup;
 			children = (
+				8A6C1836236E22EF00816239 /* View Components */,
 				8A6C1826236E082E00816239 /* Extensions */,
 				8A6C1823236E080900816239 /* Validators */,
 				8A6C181C236DF21900816239 /* View Controllers */,
@@ -301,6 +304,15 @@
 				8A6C1827236E083F00816239 /* UITextField+Validators.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8A6C1836236E22EF00816239 /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				8A6C1837236E230200816239 /* RoundedView.swift */,
+				8A6C1839236E235700816239 /* RoundedButton.swift */,
+			);
+			path = "View Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,9 +460,11 @@
 				8A6C1819236DCA8200816239 /* PhysicalAddressProtocol.swift in Sources */,
 				8A6C1830236E0DAA00816239 /* InitialViewController.swift in Sources */,
 				8A1A8724236D53BC009D1D02 /* CommentedItemProtocol.swift in Sources */,
+				8A6C1838236E230200816239 /* RoundedView.swift in Sources */,
 				8A6C1815236DBDED00816239 /* ItemType.swift in Sources */,
 				8A1A86F4236D3C2C009D1D02 /* AppDelegate.swift in Sources */,
 				8A6C1808236D8C3800816239 /* BaseItem.swift in Sources */,
+				8A6C183A236E235700816239 /* RoundedButton.swift in Sources */,
 				8A1A86F6236D3C2C009D1D02 /* SceneDelegate.swift in Sources */,
 				8A1A871C236D50EA009D1D02 /* BillProtocol.swift in Sources */,
 				8A1A8722236D537D009D1D02 /* Grocery.swift in Sources */,
