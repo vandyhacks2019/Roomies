@@ -1,5 +1,5 @@
 //
-//  ChoresService.swift
+//  ItemsService.swift
 //  Roomies
 //
 //  Created by Keaton Burleson on 11/2/19.
@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import Ballcap
+import FirebaseFirestore
 
-class ChoresService {
-    static var sharedInstance = ChoresService()
+class ItemsService {
+    static var sharedInstance = ItemsService()
+    
     
     private init() {}
+    
+    
 }

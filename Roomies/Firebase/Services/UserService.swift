@@ -115,18 +115,12 @@ class UserService {
         }
     }
 
-    public func signOut() -> Observable<Bool> {
-        return Observable.create { observer in
-            do {
-                try self.authInstance.signOut()
-                observer.onNext(true)
-            } catch let signOutError {
-                print(signOutError)
-                observer.onError(signOutError)
-            }
-            observer.onNext(true)
-            return Disposables.create()
-        }
+    public func signOut() {
+        try! self.authInstance.signOut()
+        self.authInstance.currentUser?.reload(completion: { (error) in
+            guard let authReloadError = error else { return }
+            print(authReloadError)
+        })
     }
 
     /// Update the AuthorizationResult object with the AppUser data and change the success flag to true or false depending on the AppUser being nil

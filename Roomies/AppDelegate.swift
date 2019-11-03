@@ -15,26 +15,11 @@ import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    /**
-     let ref: StorageReference = Storage.storage().reference().child("/a")
-     let data: Data = UIImage(named: "yeet.png")!.pngData()!
-     let file: File = File(ref, data: data, mimeType: .png)
-     file.save { (metadata, error) in
-         var appUser = appUser
-         
-         appUser.profilePicture = file
-         UserService.sharedInstance.updateAppUser(appUser)
-     }
-     */
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         FirebaseApp.configure()
         BallcapApp.configure(Firestore.firestore().document("version/1"))
-
-        UserService.sharedInstance.signIn(email: "test@test.com", password: "test123")
-
+        
+        
         return true
     }
 

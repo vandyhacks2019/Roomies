@@ -15,4 +15,7 @@ target 'Roomies' do
 
   # NSA Tracking
   pod 'SwiftLocation'
+
+  # :P
+  pod 'DCKit'
 end

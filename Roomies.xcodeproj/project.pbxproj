@@ -36,21 +36,24 @@
 		8A6C1817236DC98300816239 /* PhysicalAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1816236DC98300816239 /* PhysicalAddress.swift */; };
 		8A6C1819236DCA8200816239 /* PhysicalAddressProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1818236DCA8200816239 /* PhysicalAddressProtocol.swift */; };
 		8A6C181B236DCFA900816239 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C181A236DCFA900816239 /* DataError.swift */; };
-		8A6C1820236E002F00816239 /* ChoresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C181F236E002F00816239 /* ChoresService.swift */; };
+		8A6C1820236E002F00816239 /* ItemsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C181F236E002F00816239 /* ItemsService.swift */; };
 		8A6C1825236E082200816239 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1824236E082200816239 /* Validators.swift */; };
 		8A6C1828236E083F00816239 /* UITextField+Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1827236E083F00816239 /* UITextField+Validators.swift */; };
 		8A6C182A236E09B900816239 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1829236E09B900816239 /* RegisterViewController.swift */; };
 		8A6C182C236E09C600816239 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C182B236E09C600816239 /* LoginViewController.swift */; };
 		8A6C182E236E0CE100816239 /* Keaton.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6C182D236E0CE100816239 /* Keaton.storyboard */; };
 		8A6C1830236E0DAA00816239 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C182F236E0DAA00816239 /* InitialViewController.swift */; };
-		8A6C1835236E134F00816239 /* DummyDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1834236E134F00816239 /* DummyDashboardViewController.swift */; };
+		8A6C1835236E134F00816239 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1834236E134F00816239 /* DashboardViewController.swift */; };
 		8A6C1838236E230200816239 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1837236E230200816239 /* RoundedView.swift */; };
 		8A6C183A236E235700816239 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C1839236E235700816239 /* RoundedButton.swift */; };
+		8A97BB72236EAD9D00D628A7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97BB71236EAD9D00D628A7 /* ProfileViewController.swift */; };
 		8AF832CE236E50BA0034A37A /* RoundedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF832CD236E50BA0034A37A /* RoundedField.swift */; };
 		8AF832D0236E5A4C0034A37A /* RoundedMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF832CF236E5A4C0034A37A /* RoundedMapView.swift */; };
 		8AF832D2236E6A3E0034A37A /* LivingSpaceSharePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF832D1236E6A3E0034A37A /* LivingSpaceSharePage.swift */; };
 		8AF832D6236E7DF40034A37A /* CoreImage+ColorTransforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF832D5236E7DF40034A37A /* CoreImage+ColorTransforms.swift */; };
 		8AF832D8236E7E190034A37A /* String+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF832D7236E7E190034A37A /* String+QRCode.swift */; };
+		8AF832D9236E86E60034A37A /* yeet.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A6C1804236D840100816239 /* yeet.png */; };
+		8AF832DB236E91860034A37A /* UIViewController+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF832DA236E91860034A37A /* UIViewController+UIAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,7 +79,6 @@
 		8A1A86F0236D3C2C009D1D02 /* Roomies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A1A86F3236D3C2C009D1D02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A1A86F5236D3C2C009D1D02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A1A86F7236D3C2C009D1D02 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8A1A86FA236D3C2C009D1D02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A1A86FC236D3C2F009D1D02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A1A86FF236D3C2F009D1D02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,7 +110,7 @@
 		8A6C1816236DC98300816239 /* PhysicalAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalAddress.swift; sourceTree = "<group>"; };
 		8A6C1818236DCA8200816239 /* PhysicalAddressProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalAddressProtocol.swift; sourceTree = "<group>"; };
 		8A6C181A236DCFA900816239 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
-		8A6C181F236E002F00816239 /* ChoresService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresService.swift; sourceTree = "<group>"; };
+		8A6C181F236E002F00816239 /* ItemsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsService.swift; sourceTree = "<group>"; };
 		8A6C1824236E082200816239 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		8A6C1827236E083F00816239 /* UITextField+Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Validators.swift"; sourceTree = "<group>"; };
 		8A6C1829236E09B900816239 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -116,14 +118,16 @@
 		8A6C182D236E0CE100816239 /* Keaton.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keaton.storyboard; sourceTree = "<group>"; };
 		8A6C182F236E0DAA00816239 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		8A6C1832236E0FCB00816239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Cody.storyboard; sourceTree = "<group>"; };
-		8A6C1834236E134F00816239 /* DummyDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDashboardViewController.swift; sourceTree = "<group>"; };
+		8A6C1834236E134F00816239 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8A6C1837236E230200816239 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		8A6C1839236E235700816239 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		8A97BB71236EAD9D00D628A7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8AF832CD236E50BA0034A37A /* RoundedField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedField.swift; sourceTree = "<group>"; };
 		8AF832CF236E5A4C0034A37A /* RoundedMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedMapView.swift; sourceTree = "<group>"; };
 		8AF832D1236E6A3E0034A37A /* LivingSpaceSharePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingSpaceSharePage.swift; sourceTree = "<group>"; };
 		8AF832D5236E7DF40034A37A /* CoreImage+ColorTransforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreImage+ColorTransforms.swift"; sourceTree = "<group>"; };
 		8AF832D7236E7E190034A37A /* String+QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+QRCode.swift"; sourceTree = "<group>"; };
+		8AF832DA236E91860034A37A /* UIViewController+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +200,6 @@
 				8A1A8727236D552C009D1D02 /* Firebase */,
 				8A1A86F3236D3C2C009D1D02 /* AppDelegate.swift */,
 				8A1A86F5236D3C2C009D1D02 /* SceneDelegate.swift */,
-				8A1A86F7236D3C2C009D1D02 /* DashboardViewController.swift */,
 				8A1A86F9236D3C2C009D1D02 /* Main.storyboard */,
 				52F29F4E236DE90400DDEA9E /* Storyboards */,
 				8A1A86FC236D3C2F009D1D02 /* Assets.xcassets */,
@@ -262,7 +265,7 @@
 			children = (
 				8A1A8729236D57B3009D1D02 /* UserService.swift */,
 				8A6C180A236DBB2900816239 /* LivingSpaceService.swift */,
-				8A6C181F236E002F00816239 /* ChoresService.swift */,
+				8A6C181F236E002F00816239 /* ItemsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -277,13 +280,15 @@
 			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
-		8A378F3F236E2FC3009C28F1 /* Setup Pages */ = {
+		8A378F3F236E2FC3009C28F1 /* Setup */ = {
 			isa = PBXGroup;
 			children = (
+				8A6C182F236E0DAA00816239 /* InitialViewController.swift */,
+				8A15A510236E2DC8005D4E5D /* SetupViewController.swift */,
 				8A378F40236E2FEF009C28F1 /* LivingSpaceLocationPage.swift */,
 				8AF832D1236E6A3E0034A37A /* LivingSpaceSharePage.swift */,
 			);
-			path = "Setup Pages";
+			path = Setup;
 			sourceTree = "<group>";
 		};
 		8A6C1806236D8B3600816239 /* Recovered References */ = {
@@ -297,12 +302,10 @@
 		8A6C181C236DF21900816239 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8A378F3F236E2FC3009C28F1 /* Setup Pages */,
-				8A6C1829236E09B900816239 /* RegisterViewController.swift */,
-				8A6C182B236E09C600816239 /* LoginViewController.swift */,
-				8A6C182F236E0DAA00816239 /* InitialViewController.swift */,
-				8A6C1834236E134F00816239 /* DummyDashboardViewController.swift */,
-				8A15A510236E2DC8005D4E5D /* SetupViewController.swift */,
+				8A378F3F236E2FC3009C28F1 /* Setup */,
+				8A97BB70236EAD7B00D628A7 /* Authentication */,
+				8A6C1834236E134F00816239 /* DashboardViewController.swift */,
+				8A97BB71236EAD9D00D628A7 /* ProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				8A6C1827236E083F00816239 /* UITextField+Validators.swift */,
 				8AF832D5236E7DF40034A37A /* CoreImage+ColorTransforms.swift */,
 				8AF832D7236E7E190034A37A /* String+QRCode.swift */,
+				8AF832DA236E91860034A37A /* UIViewController+UIAlertController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -335,6 +339,15 @@
 				8AF832CF236E5A4C0034A37A /* RoundedMapView.swift */,
 			);
 			path = "View Components";
+			sourceTree = "<group>";
+		};
+		8A97BB70236EAD7B00D628A7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8A6C1829236E09B900816239 /* RegisterViewController.swift */,
+				8A6C182B236E09C600816239 /* LoginViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +413,7 @@
 			files = (
 				8A378F42236E31C1009C28F1 /* LaunchScreen.storyboard in Resources */,
 				8A6C182E236E0CE100816239 /* Keaton.storyboard in Resources */,
+				8AF832D9236E86E60034A37A /* yeet.png in Resources */,
 				8A1A8711236D4583009D1D02 /* GoogleService-Info.plist in Resources */,
 				8A1A86FD236D3C2F009D1D02 /* Assets.xcassets in Resources */,
 			);
@@ -462,7 +476,7 @@
 				8AF832D6236E7DF40034A37A /* CoreImage+ColorTransforms.swift in Sources */,
 				8AF832D0236E5A4C0034A37A /* RoundedMapView.swift in Sources */,
 				8A1A872F236D6B16009D1D02 /* AuthorizationResult.swift in Sources */,
-				8A6C1835236E134F00816239 /* DummyDashboardViewController.swift in Sources */,
+				8A6C1835236E134F00816239 /* DashboardViewController.swift in Sources */,
 				8A1A8716236D4F79009D1D02 /* AppUserProtocol.swift in Sources */,
 				8A6C181B236DCFA900816239 /* DataError.swift in Sources */,
 				8A6C180D236DBCA700816239 /* LivingSpace.swift in Sources */,
@@ -474,7 +488,7 @@
 				8A6C1811236DBD3700816239 /* BulletinBoard.swift in Sources */,
 				8A1A8726236D53F6009D1D02 /* MiscellaneousItem.swift in Sources */,
 				8A6C1828236E083F00816239 /* UITextField+Validators.swift in Sources */,
-				8A6C1820236E002F00816239 /* ChoresService.swift in Sources */,
+				8A6C1820236E002F00816239 /* ItemsService.swift in Sources */,
 				8A6C180B236DBB2900816239 /* LivingSpaceService.swift in Sources */,
 				8A6C182A236E09B900816239 /* RegisterViewController.swift in Sources */,
 				8A6C1819236DCA8200816239 /* PhysicalAddressProtocol.swift in Sources */,
@@ -490,7 +504,9 @@
 				8A15A511236E2DC8005D4E5D /* SetupViewController.swift in Sources */,
 				8A1A86F6236D3C2C009D1D02 /* SceneDelegate.swift in Sources */,
 				8A1A871C236D50EA009D1D02 /* BillProtocol.swift in Sources */,
+				8A97BB72236EAD9D00D628A7 /* ProfileViewController.swift in Sources */,
 				8AF832CE236E50BA0034A37A /* RoundedField.swift in Sources */,
+				8AF832DB236E91860034A37A /* UIViewController+UIAlertController.swift in Sources */,
 				8A1A8722236D537D009D1D02 /* Grocery.swift in Sources */,
 				8A6C180F236DBCDE00816239 /* LivingSpaceProtocol.swift in Sources */,
 			);

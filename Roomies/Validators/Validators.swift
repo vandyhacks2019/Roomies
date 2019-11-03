@@ -60,9 +60,8 @@ struct ProjectIdentifierValidator: ValidatorConvertible {
 class AgeValidator: ValidatorConvertible {
     func validated(_ value: String) throws -> String {
         guard value.count > 0 else {throw ValidationError("Age is required")}
-        guard let age = Int(value) else {throw ValidationError("Age must be a number!")}
+        guard Int(value) != nil else {throw ValidationError("Age must be a number!")}
         guard value.count < 3 else {throw ValidationError("Invalid age number!")}
-        guard age >= 18 else {throw ValidationError("You have to be over 18 years old to user our app :)")}
         return value
     }
 }
@@ -76,7 +75,7 @@ struct RequiredFieldValidator: ValidatorConvertible {
     
     func validated(_ value: String) throws -> String {
         guard !value.isEmpty else {
-            throw ValidationError("Required field " + fieldName)
+            throw ValidationError(fieldName + " is required")
         }
         return value
     }
@@ -85,10 +84,10 @@ struct RequiredFieldValidator: ValidatorConvertible {
 struct UserNameValidator: ValidatorConvertible {
     func validated(_ value: String) throws -> String {
         guard value.count >= 3 else {
-            throw ValidationError("Username must contain more than three characters" )
+            throw ValidationError("A username needs to contain more than three characters" )
         }
         guard value.count < 18 else {
-            throw ValidationError("Username shoudn't conain more than 18 characters" )
+            throw ValidationError("A username cannot contain more than 18 characters" )
         }
         
         do {
@@ -96,7 +95,7 @@ struct UserNameValidator: ValidatorConvertible {
                 throw ValidationError("Invalid username, username should not contain whitespaces, numbers or special characters")
             }
         } catch {
-            throw ValidationError("Invalid username, username should not contain whitespaces,  or special characters")
+            throw ValidationError("Invalid username, username should not contain whitespaces, or special characters")
         }
         return value
     }
@@ -104,7 +103,7 @@ struct UserNameValidator: ValidatorConvertible {
 
 struct PasswordValidator: ValidatorConvertible {
     func validated(_ value: String) throws -> String {
-        guard value != "" else {throw ValidationError("Password is Required")}
+        guard value != "" else {throw ValidationError("Password is required")}
         guard value.count >= 6 else { throw ValidationError("Password must have at least 6 characters") }
         
         do {

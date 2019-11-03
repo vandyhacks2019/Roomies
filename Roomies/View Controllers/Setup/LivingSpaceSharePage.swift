@@ -42,15 +42,17 @@ class LivingSpaceSharePage: UIViewController {
             self.createLivingSpace().subscribe { (event) in
                 if let createError = event.error {
                     print(createError)
-                } else if let livingSpaceDocument = event.element,
-                    let livingSpace = livingSpaceDocument.data,
+                } else if let livingSpaceDocument = event.element, let livingSpace = livingSpaceDocument.data,
                     livingSpace.address == self.chosenAddress {
-                    print("go to dashboard!")
+
+                    self.performSegue(withIdentifier: "showDashboard", sender: self)
+                    self.dismissViewControllers()
                 }
                 self.enableInterface()
             }.disposed(by: self.disposeBag)
         } else {
-            
+            self.performSegue(withIdentifier: "showDashboard", sender: self)
+            self.dismissViewControllers()
         }
     }
 
@@ -60,10 +62,19 @@ class LivingSpaceSharePage: UIViewController {
             self.alreadyCreated = true
             return LivingSpaceService.sharedInstance.createShareCode(forLivingSpace: livingSpaceDocument)
         }.subscribe { (event) in
+            self.enableInterface()
             if let shareCodeImage = event.element {
                 self.displayShareCode(shareCodeImage)
             }
         }.disposed(by: self.disposeBag)
+    }
+
+    private func dismissViewControllers() {
+        guard let vc = self.presentingViewController else { return }
+
+        while (vc.presentingViewController != nil) {
+            vc.dismiss(animated: true, completion: nil)
+        }
     }
 
     private func disableInterface() {

@@ -35,18 +35,25 @@ class LoginViewController: UIViewController {
 
             self.userService.signIn(email: email, password: password) { (authResult) in
                 if authResult.success {
-                    print("we logged in")
+                    self.performSegue(withIdentifier: "showDashboard", sender: self)
                 }
             }
         } catch (let error) {
-            print(error)
+            self.showErrorAlert(message: (error as! ValidationError).message)
             sender.isEnabled = true
         }
     }
 
     @IBAction func returnButtonTapped() {
         self.hideKeyboard()
-        self.dismiss(animated: true, completion: nil)
+        if (self.presentingViewController as? RegisterViewController) == nil {
+            let storyboard = UIStoryboard(name: "Keaton", bundle: nil)
+            let registrationViewController = storyboard.instantiateViewController(identifier: "Register")
+            
+            self.present(registrationViewController, animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 
     @objc public func hideKeyboard() {

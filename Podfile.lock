@@ -9,6 +9,7 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.3):
     - BoringSSL-GRPC/Interface (= 0.0.3)
   - BoringSSL-GRPC/Interface (0.0.3)
+  - DCKit (1.0.13)
   - Firebase (6.11.0):
     - Firebase/Core (= 6.11.0)
   - Firebase/Auth (6.11.0):
@@ -138,6 +139,7 @@ PODS:
 
 DEPENDENCIES:
   - Ballcap
+  - DCKit
   - Firebase/Auth
   - Firebase/Firestore
   - RxCocoa
@@ -148,6 +150,7 @@ SPEC REPOS:
   trunk:
     - Ballcap
     - BoringSSL-GRPC
+    - DCKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -176,6 +179,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Ballcap: 72088fbc45de9af82b0541cc74e0ecc3ff5a7c05
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
+  DCKit: ca310752c3a4d442e772de66ce4e4168ea906d62
   Firebase: bc9cfc7a96c73268656d5aaab453ff1b4b530e0e
   FirebaseAnalytics: 0e3ecff2c5d86070f7d4325e21f1edabfbd558dc
   FirebaseAuth: b401a012cc33b04df3b52bb308b04e8766f2693e
@@ -201,6 +205,6 @@ SPEC CHECKSUMS:
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SwiftLocation: e89dd4dbebbce1755836154103546f4ab3d92aae
 
-PODFILE CHECKSUM: 1243e13aa2ad8ec98d3b781bf6d2bc2d911691db
+PODFILE CHECKSUM: 8c20061fd05235df450f94ce9b1d5495b4aeb117
 
 COCOAPODS: 1.8.4
