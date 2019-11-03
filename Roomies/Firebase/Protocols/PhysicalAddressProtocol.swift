@@ -10,8 +10,7 @@ import Foundation
 import Ballcap
 
 public protocol PhysicalAddressProtocol {
-    var streetName: String? { get set }
-    var streetNumber: String? { get set }
+    var street: String? { get set }
     var city: String? { get set }
     var state: String? { get set }
     var zipCode: String? { get set }

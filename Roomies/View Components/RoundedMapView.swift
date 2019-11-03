@@ -1,5 +1,5 @@
 //
-//  RoundedButton.swift
+//  RoundedMapView.swift
 //  Roomies
 //
 //  Created by Keaton Burleson on 11/2/19.
@@ -8,8 +8,11 @@
 
 import Foundation
 import UIKit
+import MapKit
 
-@IBDesignable open class RoundedButton: UIButton {
+/// MKMapView with the ability to set a border with a corner.
+@IBDesignable open class RoundedMapView: MKMapView {
+
     /// The control's corner radius.
     @IBInspectable open var cornerRadius: CGFloat {
         get {
@@ -21,6 +24,7 @@ import UIKit
         }
     }
 
+
     // MARK: - Initializers
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,19 +34,13 @@ import UIKit
         super.init(coder: aDecoder)
     }
 
-    // MARK: - Life cycle
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-
     // MARK: - Build control
     open func customInit() {
         addBorder()
     }
 
+    /// Adds a border to the control.
     open func addBorder() {
-        clipsToBounds = true
-
         layer.masksToBounds = true
         layer.rasterizationScale = UIScreen.main.scale
         layer.shouldRasterize = true

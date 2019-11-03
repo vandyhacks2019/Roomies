@@ -8,10 +8,10 @@
 
 import Foundation
 import Ballcap
+import Contacts
 
 public struct PhysicalAddress: Codable, Modelable, PhysicalAddressProtocol {
-    public var streetName: String?
-    public var streetNumber: String?
+    public var street: String?
     public var city: String?
     public var state: String?
     public var zipCode: String?
@@ -24,5 +24,13 @@ public struct PhysicalAddress: Codable, Modelable, PhysicalAddressProtocol {
             guard let data = try? JSONEncoder().encode(self) else { return [String: String]() }
             return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: String] }!
         }
+    }
+    
+    init(fromPostalAddress postalAddress: CNPostalAddress) {
+        self.street = postalAddress.street
+        self.city = postalAddress.city
+        self.state = postalAddress.state
+        self.country = postalAddress.country
+        self.zipCode = postalAddress.postalCode
     }
 }

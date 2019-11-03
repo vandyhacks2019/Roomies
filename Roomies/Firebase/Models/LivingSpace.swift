@@ -18,6 +18,8 @@ struct LivingSpace: Codable, Modelable, BaseItemProtocol, LivingSpaceProtocol {
     var bulletinBoard: BulletinBoard?
     var name: String?
     var address: PhysicalAddress?
+    var shareCode: String?
+    var shareCodeImage: File?
 
     // MARK - Strong Properties
     var createdOn: ServerTimestamp = ServerTimestamp.pending
@@ -27,7 +29,7 @@ struct LivingSpace: Codable, Modelable, BaseItemProtocol, LivingSpaceProtocol {
     
     init() { }
 
-    init(name: String, createdBy: String, address: PhysicalAddress? = nil) {
+    init(name: String? = nil, createdBy: String, address: PhysicalAddress? = nil) {
         self.name = name
         self.createdBy = createdBy
         self.residents = [createdBy]

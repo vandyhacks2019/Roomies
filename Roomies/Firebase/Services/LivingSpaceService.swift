@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseStorage
 import Ballcap
 
 class LivingSpaceService {
@@ -37,7 +38,7 @@ class LivingSpaceService {
             }
         })
     }
-    
+
     public func fetchLivingSpaces() -> DataSource<Document<LivingSpace>> {
         let currentUserID = Auth.auth().currentUser!.uid
         let query: DataSource<Document<LivingSpace>>.Query = DataSource.Query(self.livingSpacesRef.whereField("residents", arrayContains: currentUserID))
@@ -80,7 +81,7 @@ class LivingSpaceService {
     }
 
     /// Create a new LivingSpace  on the Firebase backend, returns a Document<LivingSpace> object.
-    public func createLivingSpace(forUser appUser: AppUser, name: String, address: PhysicalAddress? = nil) -> Observable<Document<LivingSpace>> {
+    public func createLivingSpace(forUser appUser: AppUser, name: String?, address: PhysicalAddress? = nil) -> Observable<Document<LivingSpace>> {
         return self.attachAddressToAppUser(address, appUser: appUser).flatMap { (didSucceed: Bool) -> Observable<Document<LivingSpace>> in
             if didSucceed {
                 let newLivingSpace = LivingSpace(name: name, createdBy: appUser.userID!, address: address)
@@ -131,6 +132,43 @@ class LivingSpaceService {
         }
     }
 
+    /// Create a share code for a LivingSpace object
+    public func createShareCode(forLivingSpace livingSpaceDocument: Document<LivingSpace>) -> Observable<UIImage> {
+        Observable.create { observer in
+            let shareCode = self.generateRandomShareCode()
+            let id = livingSpaceDocument.id
+
+            let yeet = UIImage(named: "yeet.png")!
+            let shareCodesImageRef: StorageReference = Storage.storage().reference(withPath: "shareCodes").child(id)
+            let shareCodeImage = shareCode.qrImage(using: UIColor.systemTeal, logo: yeet)!
+
+            let context: CIContext = CIContext(options: nil)
+            let cgImage: CGImage = context.createCGImage(shareCodeImage, from: shareCodeImage.extent)!
+
+            let shareCodeData: Data = UIImage(cgImage: cgImage).pngData()!
+            let shareCodeFile: File = File(shareCodesImageRef, data: shareCodeData, mimeType: .png)
+
+            shareCodeFile.save { (metadata, error) in
+                if var livingSpace = livingSpaceDocument.data {
+                    livingSpace.shareCode = shareCode
+                    livingSpace.shareCodeImage = shareCodeFile
+                    livingSpaceDocument.data = livingSpace
+
+                    livingSpaceDocument.update { (error) in
+                        if let updateError = error {
+                            observer.onError(updateError)
+                        } else {
+                            observer.onNext(UIImage(cgImage: cgImage))
+                        }
+                    }
+                } else if let saveError = error {
+                    observer.onError(saveError)
+                }
+            }
+            return Disposables.create()
+        }
+    }
+
     /// Build a Ballcap query from  a PhysicalAddress object
     private func buildAddressQuery(_ address: PhysicalAddress) -> Query? {
         var addressQuery: Query?
@@ -174,5 +212,11 @@ class LivingSpaceService {
             }
             return Disposables.create()
         }
+    }
+
+    /// Generate a random share code
+    private func generateRandomShareCode() -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<22).map { _ in letters.randomElement()! })
     }
 }

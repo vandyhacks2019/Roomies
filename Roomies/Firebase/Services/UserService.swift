@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 import Ballcap
+import FirebaseAuth
 import RxSwift
 import RxCocoa
 

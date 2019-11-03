@@ -13,6 +13,6 @@ target 'Roomies' do
   pod 'RxSwift'
   pod 'RxCocoa'
 
-  # UI
-  pod 'Charts'
+  # NSA Tracking
+  pod 'SwiftLocation'
 end
