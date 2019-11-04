@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
 
     private var appUser: AppUser!
     private var disposeBag: RxSwift.DisposeBag!
+    
     override func viewDidLoad() {
         self.disposeBag = DisposeBag()
         UserService.sharedInstance.appUser.share().distinctUntilChanged()
@@ -41,10 +42,8 @@ class ProfileViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
-
     override func viewWillDisappear(_ animated: Bool) {
         self.appUser.name = self.fullNameField.text!
-        
         
         UserService.sharedInstance.updateAppUser(self.appUser)
     }

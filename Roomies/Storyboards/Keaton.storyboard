@@ -543,6 +543,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="1uG-P9-f02"/>
                     <connections>
+                        <outlet property="titleLabel" destination="YEM-fH-BRY" id="rXV-du-0T8"/>
                         <segue destination="zzR-x0-mOm" kind="presentation" identifier="showLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="TYV-Xb-HVn"/>
                     </connections>
                 </viewController>
@@ -566,6 +567,14 @@
                                     <action selector="dismiss:" destination="h2g-jI-eXm" eventType="touchUpInside" id="rzv-iN-ao2"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVY-vF-Bik">
+                                <rect key="frame" x="20" y="18" width="320" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="UXB-ug-O3L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-r7-cFp" customClass="DCBorderedButton" customModule="Roomies" customModuleProvider="target">
                                 <rect key="frame" x="20" y="85" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -614,20 +623,36 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVY-vF-Bik">
-                                <rect key="frame" x="20" y="18" width="320" height="39"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="fC1-fY-9Oo">
+                                <rect key="frame" x="22" y="400" width="370" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZo-qt-Zzd" customClass="RoundedButton" customModule="Roomies" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="220"/>
+                                        <color key="backgroundColor" red="0.89624733173675541" green="0.90033147262769619" blue="0.9125838953005182" alpha="0.67115977112676062" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="Logout">
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="UXB-ug-O3L"/>
+                                    <constraint firstAttribute="height" constant="220" id="CAZ-aS-ZxC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hVv-r7-cFp" firstAttribute="top" secondItem="PVY-vF-Bik" secondAttribute="bottom" constant="28" id="1Fn-TF-EcK"/>
                             <constraint firstItem="PVY-vF-Bik" firstAttribute="leading" secondItem="GJJ-fd-pbw" secondAttribute="leadingMargin" id="2IS-bH-vgZ"/>
                             <constraint firstItem="hVv-r7-cFp" firstAttribute="leading" secondItem="PVY-vF-Bik" secondAttribute="leading" id="2g0-uC-XPf"/>
+                            <constraint firstItem="fC1-fY-9Oo" firstAttribute="leading" secondItem="0gd-8q-bvK" secondAttribute="leading" constant="22" id="GaY-ep-ucJ"/>
+                            <constraint firstItem="0gd-8q-bvK" firstAttribute="trailing" secondItem="fC1-fY-9Oo" secondAttribute="trailing" constant="22" id="Mgc-xI-Ah6"/>
+                            <constraint firstItem="0gd-8q-bvK" firstAttribute="bottom" secondItem="fC1-fY-9Oo" secondAttribute="bottom" constant="188" id="Pb5-uh-q3W"/>
                             <constraint firstItem="PVY-vF-Bik" firstAttribute="top" secondItem="A2c-pH-KOh" secondAttribute="top" constant="-3" id="W69-W7-9QE"/>
                             <constraint firstItem="0gd-8q-bvK" firstAttribute="trailing" secondItem="A2c-pH-KOh" secondAttribute="trailing" constant="24" id="ZAQ-7n-3W7"/>
                             <constraint firstItem="0gd-8q-bvK" firstAttribute="bottom" secondItem="PVY-vF-Bik" secondAttribute="bottom" constant="751" id="edb-N0-O88"/>
