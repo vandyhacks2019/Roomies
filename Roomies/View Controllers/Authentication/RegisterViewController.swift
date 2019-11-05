@@ -73,7 +73,8 @@ class RegisterViewController: UIViewController {
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true)
         } else {
-            self.showErrorAlert(message: "Incorrect email address or password")
+            self.showErrorAlert(message: "This email address already has an account")
+            self.emailAddressField.becomeFirstResponder()
         }
     }
 

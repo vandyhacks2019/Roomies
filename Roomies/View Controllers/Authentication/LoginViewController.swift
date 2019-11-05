@@ -73,6 +73,7 @@ class LoginViewController: UIViewController {
             self.present(viewController, animated: true)
         } else {
             self.showErrorAlert(message: "Incorrect email address or password")
+            self.emailAddressField.becomeFirstResponder()
         }
     }
 
