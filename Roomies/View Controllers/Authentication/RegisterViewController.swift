@@ -68,10 +68,12 @@ class RegisterViewController: UIViewController {
         } else if authResult.success {
             viewController = AppStoryboard.Main.viewController(viewControllerClass: UITabBarController.self)
         }
-       
+
         if viewController != nil {
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true)
+        } else {
+            self.showErrorAlert(message: "Incorrect email address or password")
         }
     }
 

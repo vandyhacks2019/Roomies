@@ -71,6 +71,8 @@ class LoginViewController: UIViewController {
         if viewController != nil {
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true)
+        } else {
+            self.showErrorAlert(message: "Incorrect email address or password")
         }
     }
 
