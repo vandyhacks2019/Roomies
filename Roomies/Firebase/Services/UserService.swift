@@ -24,6 +24,8 @@ class UserService {
 
     /// Current AppUser
     private (set) public var appUser = ReplaySubject<AppUser>.createUnbounded()
+    private (set) public var didLogout = ReplaySubject<Bool>.create(bufferSize: 1)
+    private (set) public var didLogin = ReplaySubject<Bool>.create(bufferSize: 1)
 
     /// Private initializer for singleton magic
     private init() {
@@ -117,6 +119,8 @@ class UserService {
 
     public func signOut() {
         try! self.authInstance.signOut()
+
+        self.didLogout.on(.next(true))
         self.authInstance.currentUser?.reload(completion: { (error) in
             guard let authReloadError = error else { return }
             print(authReloadError)

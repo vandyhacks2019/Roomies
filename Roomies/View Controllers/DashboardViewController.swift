@@ -41,11 +41,14 @@ class DashboardViewController: UITableViewController {
         self.tableView.delegate = self
         self.disposeBag = DisposeBag()
         self.userService = UserService.sharedInstance
-        self.userService.appUser.share().distinctUntilChanged().bind { (appUser) in
-            self.title = (appUser.name != nil ? "Welcome, \(appUser.name!)" : "Dashboard")
-            self.titleLabel.text = self.title!
-            (self.navigationItem.titleView as! UILabel).text = self.title!
-        }.disposed(by: self.disposeBag)
+        if let currentUser = Auth.auth().currentUser {
+            self.userService.validateAppUser(forFirebaseUser: currentUser) { (authResult) in
+                if let appUser = authResult.appUser {
+                    self.titleLabel.text = (appUser.name != nil ? "Welcome, \(appUser.name!)" : "Dashboard")
+                    (self.navigationItem.titleView as! UILabel).text = (appUser.name != nil ? "Welcome, \(appUser.name!)" : "Dashboard")
+                }
+            }
+        }
     }
 
 

@@ -42,12 +42,8 @@ class RegisterViewController: UIViewController {
                 throw ValidationError("Passwords do not match")
             }
 
-            self.userService.registerAppUser(email: email, password: password, fullName: fullName!) { (authResult) in
-                if authResult.success, let appUser = authResult.appUser, appUser.livingSpaceAddresses == nil {
-                    self.showCreateLivingSpace()
-                } else if authResult.success {
-                    self.showDashboard()
-                }
+            self.userService.registerAppUser(email: email, password: password, fullName: fullName!) {
+                self.handleRegister(authResult: $0)
             }
         } catch (let error) {
             self.showErrorAlert(message: (error as! ValidationError).message)
@@ -55,29 +51,27 @@ class RegisterViewController: UIViewController {
         }
     }
 
-    private func showDashboard() {
-        DispatchQueue.main.async {
-            self.performSegue(withIdentifier: "showDashboard", sender: self)
-            self.dismiss(animated: true, completion: nil)
-        }
-    }
-
-    private func showCreateLivingSpace() {
-        DispatchQueue.main.async {
-            self.performSegue(withIdentifier: "showCreateLivingSpace", sender: self)
-            self.dismiss(animated: true, completion: nil)
-        }
-    }
-
     @IBAction func returnLoginButtonTapped() {
         self.hideKeyboard()
-        if (self.presentingViewController as? LoginViewController) == nil {
-            let storyboard = UIStoryboard(name: "Keaton", bundle: nil)
-            let loginViewController = storyboard.instantiateViewController(identifier: "Login")
+        self.dismiss(animated: true, completion: nil)
 
-            self.present(loginViewController, animated: true)
-        } else {
-            self.dismiss(animated: true, completion: nil)
+        if (self.presentingViewController as? RegisterViewController) == nil {
+            self.presentingViewController!.present(RegisterViewController.instantiate(fromAppStoryboard: .PreLogin), animated: true)
+        }
+    }
+
+    private func handleRegister(authResult: AuthorizationResult) {
+        var viewController: UIViewController!
+
+        if authResult.success, let appUser = authResult.appUser, appUser.livingSpaceAddresses == nil {
+            viewController = AppStoryboard.Setup.viewController(viewControllerClass: SetupViewController.self)
+        } else if authResult.success {
+            viewController = AppStoryboard.Main.viewController(viewControllerClass: UITabBarController.self)
+        }
+       
+        if viewController != nil {
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: true)
         }
     }
 

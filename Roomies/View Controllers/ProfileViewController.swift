@@ -16,17 +16,17 @@ class ProfileViewController: UIViewController {
 
     private var appUser: AppUser!
     private var disposeBag: RxSwift.DisposeBag!
-    
+
     override func viewDidLoad() {
         self.disposeBag = DisposeBag()
         UserService.sharedInstance.appUser.share().distinctUntilChanged()
             .bind { appUser in
                 self.appUser = appUser
-                
+
                 if let fullName = appUser.name {
                     self.fullNameField.text = fullName
                 }
-                
+
                 if let profilePicture = appUser.profilePicture {
                     profilePicture.getData { (data, error) in
                         if let pictureData = data {
@@ -44,7 +44,16 @@ class ProfileViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         self.appUser.name = self.fullNameField.text!
-        
+
         UserService.sharedInstance.updateAppUser(self.appUser)
+    }
+
+    @IBAction func logout(_ sender: UIButton) {
+        UserService.sharedInstance.signOut()
+
+        let initialViewController = InitialViewController.instantiate(fromAppStoryboard: .PreLogin)
+        initialViewController.modalPresentationStyle = .fullScreen
+        
+        self.present(initialViewController, animated: true)
     }
 }
